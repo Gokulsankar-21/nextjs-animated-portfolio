@@ -3,21 +3,41 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const variants ={
-  variants1:{ // inital pos
-    x:0,
-    y:0,
-    opacity:0
+const variants = {
+  variants1: {
+    // inital pos
+    x: 0,
+    y: 0,
+    opacity: 0,
   },
-  variants2:{ // animate post
-    x:200,
-    y:-200,
-    transition:{
-      ease:'easeOut'
+  variants2: {
+    // animate post
+    x: 200,
+    y: -200,
+    transition: {
+      ease: "easeOut",
+      delay: 2,
+      duration: 4,
     },
-    opacity:1
-  }
-}
+    opacity: 1,
+  },
+};
+
+const rotaionVariants = {// ithuku innum  sila thevai iruku
+  startPos: {
+    x: 0,
+    y: 0,
+    opacity: 0,
+  },
+  animatePos: {
+    x: 0,
+    y: 0,
+    opacity: 0
+    
+  },
+  // 25% top, 50% right, 75% bottom , 100% left - intha way terinja ithu innum easy
+  // tennis bol maari alaga bounce aganum - beautiful animation speed oda - panna vali kandu pidi - ithu enaku pidichi iruku - detailed ah kathukirathu
+};
 export default function AnimationTest() {
   return (
     <>
@@ -98,17 +118,8 @@ export default function AnimationTest() {
       {/* --var - condional animation-- */}
       <div
         className="w-full h-full flex justify-center 
-    gap-4 items-center bg-slate-300 border-t"
+    gap-4 items-center bg-slate-500 border-t"
       >
-        <motion.div
-          className="w-20 h-20 bg-orange-400 text-sm flex items-center justify-center text-center"
-          variants={variants}
-          initial={"variants1"}
-          animate={}
-        >
-          {/*it works */}
-          trans
-        </motion.div>
         <motion.div
           className="w-20 h-20 bg-orange-400 text-sm flex items-center justify-center text-center"
           initial={{ x: -100, y: 0, opacity: 0 }}
@@ -127,6 +138,27 @@ export default function AnimationTest() {
           {/*it works */}
           trans
         </motion.div>
+
+        {/* variants */}
+        <motion.div
+          className="w-20 h-20 bg-indigo-400 text-sm flex items-center justify-center text-center"
+          variants={variants}
+          initial={"variants1"}
+          animate={"variants2"}
+        >
+          variants
+        </motion.div>
+
+        {/* testing */}
+        <motion.div
+          className="w-20 h-20 bg-gray-200 text-sm flex items-center justify-center text-center"
+          variants={variants}
+          initial={"variants1"}
+          animate={'variants2'}
+        
+        >
+          variants
+        </motion.div>
       </div>
     </>
   );
@@ -144,10 +176,11 @@ export default function AnimationTest() {
  *
  * ithula than nama animation ah add pannuvom
  *
- * @Animation - movement(x,y) transtion transform ellam senthu irukurthu
+ * @Animation - movement(x,y)-> translate, transtion nama kudutha props la evlo neram dealy and duration oda nadakim nu oru container ah irukum, transform ellam senthu irukurthu
  * @transion - opacity[fadein,fadeout], speed variation ah irukurathu , duration delay irukurathu
- * @transform - shape ah mathurarhu
- *
+ * @transform - shape ah mathurarhu -  ithoda props
+ *      @translate - x and y axis movement 
+ *  
  * @intial -ithula ethu venalum kuduthukalm - same as animate maari than
  * 
  ----------------------
