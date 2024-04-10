@@ -15,15 +15,15 @@ const links = [
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="flex items-center h-full justify-between px-4 sm:px-8 md:px-12  lg:px-16 xl:px-24 ">
+    <div className="flex items-center h-full justify-between px-4 sm:px-8 md:px-12  lg:px-24 xl:px-28 ">
       {/* DESKTOP LINKS */}
-      <div className="hidden md:flex gap-4 text-xl w-1/3 ">
+      <div className="hidden md:flex gap-4 text-xl md:w-1/3">
         {links.map((link) => (
           <NavItem link={link} key={link.title} />
         ))}
       </div>
 
-      <div className=" md:hidden lg:flex xl:w-1/3  xl:justify-center">
+      <div className=" md:hidden lg:flex lg:w-1/3  lg:justify-center ">
         {/* LOGO */}
         <Link
           href="/"
@@ -36,7 +36,7 @@ export default function NavBar() {
         </Link>
       </div>
       {/* SOCIAL */}
-      <div className="hidden md:flex gap-4 w-1/3  justify-center">
+      <div className="hidden md:flex gap-4 w-1/3  md:justify-end ">
         <Link href="https://github.com/Gokulsankar-21">
           <Image src="/github.png" width={24} height={24} alt="github" />
         </Link>
