@@ -41,22 +41,40 @@ const bottomBarVariants = {
     backgroundColor: "#fff",
   },
 };
-// menu list animation - bouncing
+// menu list animation - bouncing -  default
 const listVariants = {
   closed: {
     x: "100vw",
   },
   opened: {
     x: 0,
+    transition: {
+      staggerChildren: 0.2, // antha children la irukur open variant animate agum - tricky
+    },
   },
 };
 
 // list item animation - staggered / lama dev enaketha dev - intha maari learning ku reason ah iruku - enakatha dev and miga chirantha vali
 const listItemVariants = {
-closed:{
-  
-}
-}
+  closed: {
+    opacity: 0,
+    x: -10,
+  },
+  opened: {
+    opacity: 1,
+    x: 0,
+  },
+  /**
+   * children ku animation panna oru props iruku athu animateEffect oda varum
+   * @StaggeredChildren - ithu children ah oru interval la animate pannuom - wave maari irukum
+   * 
+   ithu maari kudukum bothu children ku separate ah inital and animate panna theva ila - parent la irunthu athu animate agum
+
+   ivlo neram thani thani elment ku animate pannom 
+   ipa nama parent element la irunthu children elements ku animate pandrom
+   so, athu inherit agum - ithu kandupidichidalam
+   */
+};
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   return (
@@ -136,15 +154,20 @@ export default function NavBar() {
       </div>
       {/*  MENU LIST */}
       {open && (
-        <motion.div className="absolute bg-black text-white top-0 left-0 w-screen h-screen flex flex-col justify-center items-center gap-8 text-4xl z-30 overflow-hidden m-0 p-0"
-        variants={listVariants}
-        initial='closed'
-        animate={open ? 'opened':"closed"}
+        <motion.div
+          className="absolute bg-black text-white top-0 left-0 w-screen h-screen flex flex-col justify-center items-center gap-8 text-4xl z-30 overflow-hidden m-0 p-0"
+          variants={listVariants}
+          initial="closed"
+          animate={open ? "opened" : "closed"}
         >
           {links.map((link) => (
-            <Link key={link.title} href={link.url}>
-              {link.title}
-            </Link>
+            <motion.div
+              className=""
+              key={link.title}
+              variants={listItemVariants}
+            >
+              <Link href={link.url}>{link.title}</Link>
+            </motion.div>
           ))}
         </motion.div>
       )}
@@ -161,6 +184,10 @@ export default function NavBar() {
  *     inga open ah iruntha opened var animate agum
  *     open ilatha time-close pannum bothu closed animate agum
  *
- *  @framer_motion 
+ *  @framer_motion
  *    @default - Bouncing Effect
+ *
+ * @nextjs _@framer_motion
+ *    Link la motion add panna mudiyathu
+ *   orae vali div la wrap pandrthu thaan
  */
