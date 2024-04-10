@@ -41,6 +41,22 @@ const bottomBarVariants = {
     backgroundColor: "#fff",
   },
 };
+// menu list animation - bouncing
+const listVariants = {
+  closed: {
+    x: "100vw",
+  },
+  opened: {
+    x: 0,
+  },
+};
+
+// list item animation - staggered / lama dev enaketha dev - intha maari learning ku reason ah iruku - enakatha dev and miga chirantha vali
+const listItemVariants = {
+closed:{
+  
+}
+}
 export default function NavBar() {
   const [open, setOpen] = useState(false);
   return (
@@ -120,13 +136,17 @@ export default function NavBar() {
       </div>
       {/*  MENU LIST */}
       {open && (
-        <div className="absolute bg-black text-white top-0 left-0 w-screen h-screen flex flex-col justify-center items-center gap-8 text-4xl z-30 ">
+        <motion.div className="absolute bg-black text-white top-0 left-0 w-screen h-screen flex flex-col justify-center items-center gap-8 text-4xl z-30 overflow-hidden m-0 p-0"
+        variants={listVariants}
+        initial='closed'
+        animate={open ? 'opened':"closed"}
+        >
           {links.map((link) => (
             <Link key={link.title} href={link.url}>
               {link.title}
             </Link>
           ))}
-        </div>
+        </motion.div>
       )}
     </div>
   );
@@ -141,4 +161,6 @@ export default function NavBar() {
  *     inga open ah iruntha opened var animate agum
  *     open ilatha time-close pannum bothu closed animate agum
  *
+ *  @framer_motion 
+ *    @default - Bouncing Effect
  */
