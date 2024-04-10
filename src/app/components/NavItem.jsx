@@ -7,7 +7,7 @@ export default function NavItem({ link }) {
     console.log(pathName);
   return (
 
-    <Link href={link.url} className={`p-1 rounded ${pathName === link.url && 'bg-black text-white'}`}>
+    <Link href={link.url} className={`p-1 rounded text-black ${pathName === link.url && 'bg-black text-white'}`}>
       {link.title}
     </Link>
   );
