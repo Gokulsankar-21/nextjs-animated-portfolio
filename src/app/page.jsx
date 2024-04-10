@@ -23,6 +23,7 @@ const Homepage = () => {
         <div className="w-full flex gap-4 ">
           <button className="p-4 text-white bg-black rounded-lg ring-1 ring-black">
             View My Work
+            
           </button>
           <button className="p-4 text-black rounded-lg ring-1 ring-black ">
             Contact Me
