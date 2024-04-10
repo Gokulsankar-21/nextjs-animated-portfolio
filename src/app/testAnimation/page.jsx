@@ -43,16 +43,34 @@ export default function AnimationTest() {
         </motion.div>
       </div>
 
+      {/* ---- */}
       <div
         className="w-full h-full flex justify-center 
     gap-4 items-center bg-slate-300 border-t"
       >
+        {/* trans - easeInOut */}
         <motion.div
           className="w-20 h-20 bg-yellow-400 text-sm flex items-center justify-center text-center"
           initial={{ x: -100, y: 0 }}
           animate={{ x: 100, y: 100 }}
-          transition={{ delay: 2, duration: 5, ease: "backInOut" }}
-        ></motion.div>
+          transition={{ delay: 1, duration: 3, ease: "easeInOut" }}
+        >easeInOut</motion.div>
+
+        {/* trans - backInOut */}
+        <motion.div
+          className="w-20 h-20 bg-pink-400 text-sm flex items-center justify-center text-center"
+          initial={{ x: -100, y: 0 }}
+          animate={{ x: 100, y: 100 }}
+          transition={{ delay: 5, duration: 3, ease: "backInOut" }}
+        >backInOut</motion.div>
+
+        {/* trans - circInOut */}
+        <motion.div
+          className="w-20 h-20 bg-orange-400 text-sm flex items-center justify-center text-center"
+          initial={{ x: -100, y: 0 }}
+          animate={{ x: 100, y: 100 }}
+          transition={{ delay: 9, duration: 3, ease: "circInOut" }}
+        >circInOut</motion.div>
       </div>
     </>
   );
