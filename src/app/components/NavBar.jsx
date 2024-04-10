@@ -48,8 +48,9 @@ const listVariants = {
   },
   opened: {
     x: 0,
+    when: "beforeChildren", // ithu first parent animate agum aprm children animate ahum
     transition: {
-      staggerChildren: 0.2, // antha children la irukur open variant animate agum - tricky
+      staggerChildren: 0.2, // antha children la irukur open variant animate agum - tricky - minga opened la irukum bothu children layum open animation than nadakum
     },
   },
 };

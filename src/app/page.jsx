@@ -7,7 +7,7 @@ const Homepage = () => {
         <Image src={"/hero.png"} fill className="object-contain" />
       </div>
       {/* TEXT CONTAINER */}
-      <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-4 md:gap-8 justify-center items-center py-3 sm:p-0">
+      <div className="h-1/2 lg:h-full lg:w-1/2 flex flex-col gap-4 md:gap-8 justify-center items-center p-2 ">
         {/* TITLE */}
         <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
           Crafting Digital Experiences, Designing Tomorrow.
@@ -20,12 +20,11 @@ const Homepage = () => {
           commitment to excellence.
         </p>
         {/* BUTTONS */}
-        <div className="w-full flex gap-4 ">
-          <button className="p-4 text-white bg-black rounded-lg ring-1 ring-black">
+        <div className="w-full flex gap-4 pt-1 sm:pt-0 ">
+          <button className="p-2 md:p-4 text-white bg-black rounded-lg ring-1 ring-black">
             View My Work
-            
           </button>
-          <button className="p-4 text-black rounded-lg ring-1 ring-black ">
+          <button className="p-2 md:p-4 text-black rounded-lg ring-1 ring-black ">
             Contact Me
           </button>
         </div>
