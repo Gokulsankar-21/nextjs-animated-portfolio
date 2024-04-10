@@ -186,8 +186,24 @@ export default function NavBar() {
  *
  *  @framer_motion
  *    @default - Bouncing Effect
+ *    @staggered
  *
  * @nextjs _@framer_motion
  *    Link la motion add panna mudiyathu
  *   orae vali div la wrap pandrthu thaan
+ */
+/**
+ * ithu pakkavana learning
+ * lama dev naala nama intha alavuku learn panni iruken
+ * enaku intha maari learning than siranthathu enaku ethathu
+ * Big Thanks to lama dev
+ * he makes life easier
+ * avaru developing style clean and easier ever
+ * intha maari developer naala than neraya puthu vithamana learning enmakula urvagum
+ * this is memerable day
+ * intha maari learning experince enaku pakkkvana feelings ah tharuthu
+ * na oru kurikol oda itha senjitu irunthen - intha maari ninukama ah learn pannalam
+ * itha intha maari way la than kathukanum nu pannen
+ * ithu enaku oru inspiration -  intha part enaku oru inspiration
+ * intha maari learnigs thaan enaku theva - ithuku na kathutu iurpen
  */
