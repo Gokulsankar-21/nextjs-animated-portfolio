@@ -2,6 +2,22 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+
+const variants ={
+  variants1:{ // inital pos
+    x:0,
+    y:0,
+    opacity:0
+  },
+  variants2:{ // animate post
+    x:200,
+    y:-200,
+    transition:{
+      ease:'easeOut'
+    },
+    opacity:1
+  }
+}
 export default function AnimationTest() {
   return (
     <>
@@ -86,16 +102,25 @@ export default function AnimationTest() {
       >
         <motion.div
           className="w-20 h-20 bg-orange-400 text-sm flex items-center justify-center text-center"
-          initial={{ x: -100, y: 0 }}
+          variants={variants}
+          initial={"variants1"}
+          animate={}
+        >
+          {/*it works */}
+          trans
+        </motion.div>
+        <motion.div
+          className="w-20 h-20 bg-orange-400 text-sm flex items-center justify-center text-center"
+          initial={{ x: -100, y: 0, opacity: 0 }}
           animate={{
             x: 100,
             y: 100,
             transition: {
-              delay: 9,
+              delay: 2,
               duration: 3,
               ease: "circInOut",
-              opacity: 1,
             },
+            opacity: 1,
           }}
           transition={{}}
         >
@@ -120,9 +145,10 @@ export default function AnimationTest() {
  * ithula than nama animation ah add pannuvom
  *
  * @Animation - movement(x,y) transtion transform ellam senthu irukurthu
- * @transion - opacity,fadein, speed variation ah irukurathu , duration delay irukurathu
+ * @transion - opacity[fadein,fadeout], speed variation ah irukurathu , duration delay irukurathu
  * @transform - shape ah mathurarhu
  *
+ * @intial -ithula ethu venalum kuduthukalm - same as animate maari than
  * 
  ----------------------
  * @framer_motion useEffect() and useState() use pannvom - so athu nextjs la client component ah declare pannanum
@@ -160,7 +186,7 @@ export default function AnimationTest() {
  *        @circInOut - ithu mid la sema fast ah move aguthu - ithu familiar agalam
  *
  *      @transition_Type
- *          @spring - default -
+ *          @spring - default -fade in
  *          @staggered - wave form
  *
  ----------------------
@@ -171,5 +197,10 @@ export default function AnimationTest() {
  *        @scale
  *
  *
+ * @opacity
+ *    opacity thaniya props ala tharom 
+ *    athu animate->trans la kudutha work agathu
+ *    thaniya thanranum
+ *    separate transtion la thantha work agum
  * ithae than ella animation kum
  */
