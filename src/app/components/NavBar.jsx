@@ -207,3 +207,6 @@ export default function NavBar() {
  * ithu enaku oru inspiration -  intha part enaku oru inspiration
  * intha maari learnigs thaan enaku theva - ithuku na kathutu iurpen
  */
+/**
+ * switched main branch
+ */
