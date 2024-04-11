@@ -37,7 +37,7 @@ export default function About() {
         {/* --TEXT CONTAINER--  */}
         <div className="p-4 sm:p-8 md:p-12  lg:p-24 xl:p-28 flex flex-col gap-24 md:gap-32 xl:gap-48 lg:w-1/2 lg:pr-0">
           {/* BIOGRAPHY - 1*/}
-          <div className="flex flex-col gap-8 justify-center">
+          <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY TITLE */}
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
 
@@ -56,12 +56,13 @@ export default function About() {
             </span>
 
             {/* BIOGRAPHY SIGNATURE */}
-            <div className="self-end">
+            <div className="pl-60 self-center">
               <Image
                 src="/signature.png"
                 alt="signature"
                 width={200}
                 height={100}
+                className="object-contain scale-150"
               />
             </div>
 
@@ -90,12 +91,12 @@ export default function About() {
           </div>
 
           {/* SKILLS - 2 */}
-          <div className="flex flex-col gap-8 justify-center">
+          <div className="flex flex-col gap-12 justify-center">
             {/* SKILL TITLE */}
             <h1 className="text-2xl font-bold">SKILLS</h1>
 
             {/* SKILL LIST */}
-            <ul className="flex gap-6 flex-wrap">
+            <ul className="flex gap-4 md:gap-6 flex-wrap">
               {/* SKILL LIST ITEM */}
               {skills.map((skill) => (
                 <li
@@ -110,7 +111,7 @@ export default function About() {
           </div>
 
           {/* EXPERIENCE - 3*/}
-          <div className="flex flex-col gap-8 justify-center">
+          <div className="flex flex-col gap-12 justify-center">
             {/* EXPERIENCE TITLE */}
             <h1 className="text-2xl font-bold">EXPERIENCE</h1>
             {/* EXPERIENCE LIST CONTAINER */}
