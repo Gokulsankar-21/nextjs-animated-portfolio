@@ -22,10 +22,10 @@ export default function TransitionProvider({ children }) {
         />
         {/* PATH NAME */}
         <motion.div
-          className=" m-auto text-white text-8xl fixed top-0 left-0 bottom-0 right-0 w-fit h-fit z-30"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 0 }}
-          exit={{}} 
+          className=" m-auto text-white text-8xl fixed top-0 left-0 bottom-0 right-0 w-fit h-fit "
+          initial={{ opacity: 1, zIndex: 30 }}
+          animate={{ opacity: 0, zIndex: 40 }}
+          exit={{}}
           transition={{ delay: 0, duration: 0.8, ease: "easeOut" }}
         >
           {pathName === "/"
@@ -41,7 +41,7 @@ export default function TransitionProvider({ children }) {
         {/*ithu top to bottom vanthutu mela poidum */}
         {/* 2nd DIV */}
         <motion.div
-          className="bg-black w-screen h-screen  fixed bottom-0 z-40 rounded-t-[100px]"
+          className="bg-black w-screen h-screen  fixed bottom-0 z-30 rounded-t-[100px]"
           initial={{ height: "140vh" }}
           animate={{ height: "0vh" }}
           transition={{ delay: 0.6, duration: 0.5, ease: "easeOut" }}
@@ -108,4 +108,13 @@ export default function TransitionProvider({ children }) {
  *      # react la nama key vechi than comp ah identify panna mudyum
  *      # athu multiple copy la comp ah render pannum - update comp - comp recycle
  *       # itha vechi than page ah change pannum bothu animate pannuvom, antha page react vd tree la remove agum athu key vechi than identify panna mudiyum
+ */
+/**
+ * @PULL_Req
+ *        initial={{ opacity: 1, zIndex: 30 }}
+          animate={{ opacity: 0, zIndex: 40 }}
+ */
+/**
+ * add some delay in responsive menu list -  exit animation add pannalam - Pending
+ * z index - menulist and pathname in page transition - solved
  */

@@ -125,7 +125,7 @@ export default function NavBar() {
         </Link>
       </div>
 
-      {/* RESPONSIVE MENU  */}
+      {/* RESPONSIVE MENU BUTTON */}
       <div className="md:hidden ">
         <motion.button
           className="flex flex-col  items-center  justify-between w-10 h-8  z-50 relative "
@@ -156,7 +156,7 @@ export default function NavBar() {
       {/*  MENU LIST */}
       {open && (
         <motion.div
-          className="absolute bg-black text-white top-0 left-0 w-screen h-screen flex flex-col justify-center items-center gap-8 text-4xl z-50 overflow-hidden m-0 p-0"
+          className="absolute bg-black text-white top-0 left-0 w-screen h-screen flex flex-col justify-center items-center gap-8 text-4xl z-40 overflow-hidden m-0 p-0"
           variants={listVariants}
           initial="closed"
           animate={open ? "opened" : "closed"}
