@@ -22,7 +22,9 @@ export default function About() {
     { skill: "Framer Motion" },
     { skill: "Webpack" },
     { skill: "Vite" },
-    { skill: "Framer Motion" },
+    { skill: "Redux" },
+    { skill: "Flow-bite" },
+    { skill: "Material UI" },
   ];
   return (
     <motion.div
@@ -31,11 +33,11 @@ export default function About() {
       className="h-full"
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <div className="">
-        {/* --TEST CONTAINER--  */}
-        <div className="p-4 sm:p-8 md:p-12  lg:p-24 xl:p-28 flex flex-col gap-24 md:gap-32 xl:gap-48">
+      <div className="h-full overflow-scroll lg:flex lg:flex-row">
+        {/* --TEXT CONTAINER--  */}
+        <div className="p-4 sm:p-8 md:p-12  lg:p-24 xl:p-28 flex flex-col gap-24 md:gap-32 xl:gap-48 lg:w-1/2 lg:pr-0">
           {/* BIOGRAPHY - 1*/}
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 justify-center">
             {/* BIOGRAPHY TITLE */}
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
 
@@ -50,7 +52,7 @@ export default function About() {
 
             {/* BIOGRAPHY QUOTES */}
             <span className="italic text-gray-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              "I am Always Working on Projects."
             </span>
 
             {/* BIOGRAPHY SIGNATURE */}
@@ -86,19 +88,156 @@ export default function About() {
               </svg>
             </div>
           </div>
-          {/* SKILLS */}
-          <div className="">
+
+          {/* SKILLS - 2 */}
+          <div className="flex flex-col gap-8 justify-center">
             {/* SKILL TITLE */}
-            <h1>SKILLS</h1>
-            <div className=""></div>
+            <h1 className="text-2xl font-bold">SKILLS</h1>
+
+            {/* SKILL LIST */}
+            <ul className="flex gap-6 flex-wrap">
+              {/* SKILL LIST ITEM */}
+              {skills.map((skill) => (
+                <li
+                  key={skill.skill}
+                  className="p-2 bg-black text-white hover:bg-white hover:text-black cursor-pointer
+                rounded"
+                >
+                  {skill.skill}
+                </li>
+              ))}
+            </ul>
           </div>
-          {/* EXPERIENCE */}
-          <div className="">EXPERIENCE</div>
+
+          {/* EXPERIENCE - 3*/}
+          <div className="flex flex-col gap-8 justify-center">
+            {/* EXPERIENCE TITLE */}
+            <h1 className="text-2xl font-bold">EXPERIENCE</h1>
+            {/* EXPERIENCE LIST CONTAINER */}
+            <div className="">
+              {/* EXPERIENCE LIST ITEM - 1 */}
+              <div className="w-full flex gap-8">
+                {/* LEFT */}
+                <div className="w-1/3 flex flex-col gap-2">
+                  {/* JOB TITLE */}
+                  <div className="p-3 font-bold text-black bg-white rounded-s-lg rounded-b-lg">
+                    JavaScript Intern
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    I led web development, offering expertise in JavaScript
+                    frameworks.
+                  </div>
+                  {/* JOB TIME */}
+                  <div className="p-1 text-sm font-bold text-red-400">
+                    2024 - Present
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 text-sm bg-white font-bold w-fit">
+                    Apple
+                  </div>
+                </div>
+                {/* CENTER */}
+                <div className="w-1/6 ">
+                  {/* LINE */}
+                  <div className="w-1 flex justify-center bg-gray-600 h-full relative">
+                    {/* LINE CIRCLE */}
+                    <div
+                      className="w-5 h-5 bg-white rounded-full
+                     border-2 border-red-400 absolute top-0"
+                    ></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3 ">{/*EMPTY */}</div>
+              </div>
+
+              {/* EXPERIENCE LIST ITEM - 2 */}
+              <div className="w-full flex gap-8">
+                {/* LEFT */}
+                <div className="w-1/3 ">{/*EMPTY */}</div>
+
+                {/* CENTER */}
+                <div className="w-1/6 ">
+                  {/* LINE */}
+                  <div className="w-1 flex justify-center bg-gray-600 h-full relative">
+                    {/* LINE CIRCLE */}
+                    <div
+                      className="w-5 h-5 bg-white rounded-full
+                     border-2 border-red-400 absolute top-0"
+                    ></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3 flex flex-col gap-2">
+                  {/* JOB TITLE */}
+                  <div className="p-3 font-bold text-black bg-white rounded-s-lg rounded-b-lg">
+                    JavaScript Intern
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    I led web development, offering expertise in JavaScript
+                    frameworks.
+                  </div>
+                  {/* JOB TIME */}
+                  <div className="p-1 text-sm font-bold text-red-400">
+                    2024 - Present
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 text-sm bg-white font-bold w-fit">
+                    Apple
+                  </div>
+                </div>
+              </div>
+
+              {/* EXPERIENCE LIST ITEM - 3 */}
+              <div className="w-full flex gap-8">
+                {/* LEFT */}
+                <div className="w-1/3 flex flex-col gap-2">
+                  {/* JOB TITLE */}
+                  <div className="p-3 font-bold text-black bg-white rounded-s-lg rounded-b-lg">
+                    JavaScript Intern
+                  </div>
+                  {/* JOB DESC */}
+                  <div className="p-3 text-sm italic">
+                    I led web development, offering expertise in JavaScript
+                    frameworks.
+                  </div>
+                  {/* JOB TIME */}
+                  <div className="p-1 text-sm font-bold text-red-400">
+                    2024 - Present
+                  </div>
+                  {/* JOB COMPANY */}
+                  <div className="p-1 text-sm bg-white font-bold w-fit">
+                    Apple
+                  </div>
+                </div>
+                {/* CENTER */}
+                <div className="w-1/6 ">
+                  {/* LINE */}
+                  <div className="w-1 flex justify-center bg-gray-600 h-full relative">
+                    {/* LINE CIRCLE */}
+                    <div
+                      className="w-5 h-5 bg-white rounded-full
+                     border-2 border-red-400 absolute top-0"
+                    ></div>
+                  </div>
+                </div>
+                {/* RIGHT */}
+                <div className="w-1/3 ">{/*EMPTY */}</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* SVG CONTAINER  */}
-        <div className="hidden"></div>
+        <div className="hidden lg:block lg:w-1/2 h-full bg-blue-400"></div>
       </div>
     </motion.div>
   );
 }
+/**
+ * @Improvement
+ * experience la content production ku varum bothu changes pananum
+ *
+ */
