@@ -22,10 +22,10 @@ export default function TransitionProvider({ children }) {
         />
         {/* PATH NAME */}
         <motion.div
-          className=" m-auto text-white text-8xl fixed top-0 left-0 bottom-0 right-0 w-fit h-fit z-50"
+          className=" m-auto text-white text-8xl fixed top-0 left-0 bottom-0 right-0 w-fit h-fit z-30"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
-          exit={{}}
+          exit={{}} 
           transition={{ delay: 0, duration: 0.8, ease: "easeOut" }}
         >
           {pathName === "/"

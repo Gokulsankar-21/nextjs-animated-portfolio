@@ -4,6 +4,26 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function About() {
+  const skills = [
+    { skill: "JavaScript" },
+    { skill: "React.js" },
+    { skill: "Node.js" },
+    { skill: "Next.js" },
+    { skill: "Express.js" },
+    { skill: "Tailwind CSS" },
+    { skill: "Mongo DB" },
+    { skill: "Web Socket" },
+    { skill: "Git" },
+    { skill: "GitHub" },
+    { skill: "Docker" },
+    { skill: "AWS " },
+    { skill: "Firebase" },
+    { skill: "VS Code" },
+    { skill: "Framer Motion" },
+    { skill: "Webpack" },
+    { skill: "Vite" },
+    { skill: "Framer Motion" },
+  ];
   return (
     <motion.div
       initial={{ y: "-200vh" }}
@@ -12,9 +32,9 @@ export default function About() {
       transition={{ duration: 1, ease: "easeOut" }}
     >
       <div className="">
-        {/* TEST CONTAINER  */}
+        {/* --TEST CONTAINER--  */}
         <div className="p-4 sm:p-8 md:p-12  lg:p-24 xl:p-28 flex flex-col gap-24 md:gap-32 xl:gap-48">
-          {/* BIOGRAPHY */}
+          {/* BIOGRAPHY - 1*/}
           <div className="flex flex-col gap-8">
             {/* BIOGRAPHY TITLE */}
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
@@ -67,10 +87,15 @@ export default function About() {
             </div>
           </div>
           {/* SKILLS */}
-          <div className="">SKILLS</div>
+          <div className="">
+            {/* SKILL TITLE */}
+            <h1>SKILLS</h1>
+            <div className=""></div>
+          </div>
           {/* EXPERIENCE */}
           <div className="">EXPERIENCE</div>
         </div>
+
         {/* SVG CONTAINER  */}
         <div className="hidden"></div>
       </div>
