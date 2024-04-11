@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
+import Brain from "../components/Brain";
 
 export default function About() {
   const skills = [
@@ -13,6 +14,7 @@ export default function About() {
     { skill: "Tailwind CSS" },
     { skill: "Mongo DB" },
     { skill: "Web Socket" },
+    { skill: "Redux" },
     { skill: "Git" },
     { skill: "GitHub" },
     { skill: "Docker" },
@@ -22,10 +24,13 @@ export default function About() {
     { skill: "Framer Motion" },
     { skill: "Webpack" },
     { skill: "Vite" },
-    { skill: "Redux" },
     { skill: "Flow-bite" },
     { skill: "Material UI" },
   ];
+
+  const containerRef = useRef();
+  const {scrollYProgress} = useScroll({ container: containerRef });
+  console.log(scrollYProgress);
   return (
     <motion.div
       initial={{ y: "-200vh" }}
@@ -33,11 +38,14 @@ export default function About() {
       className="h-full"
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <div className="h-full overflow-scroll lg:flex lg:flex-row">
+      <div
+        className="h-full overflow-scroll lg:flex lg:flex-row"
+        ref={containerRef}
+      >
         {/* --TEXT CONTAINER--  */}
         <div className="p-4 sm:p-8 md:p-12  lg:p-24 xl:p-28 flex flex-col gap-24 md:gap-32 xl:gap-48 lg:w-2/3 xl:w-1/2 lg:pr-0 xl:pr-0">
           {/* BIOGRAPHY - 1*/}
-          <div className="flex flex-col gap-12 justify-center">
+          <div className="flex flex-col gap-10 justify-center">
             {/* BIOGRAPHY TITLE */}
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
 
@@ -111,7 +119,7 @@ export default function About() {
           </div>
 
           {/* EXPERIENCE - 3*/}
-          <div className="flex flex-col gap-12 justify-center">
+          <div className="flex flex-col gap-12 justify-center pb-48">
             {/* EXPERIENCE TITLE */}
             <h1 className="text-2xl font-bold">EXPERIENCE</h1>
             {/* EXPERIENCE LIST CONTAINER */}
@@ -139,7 +147,7 @@ export default function About() {
                   </div>
                 </div>
                 {/* CENTER */}
-                <div className="w-1/6 bg-blue-400">
+                <div className="w-1/6">
                   {/* LINE */}
                   <div className="w-1 flex justify-center bg-gray-600 h-full relative">
                     {/* LINE CIRCLE */}
@@ -232,7 +240,9 @@ export default function About() {
         </div>
 
         {/* SVG CONTAINER  */}
-        <div className="hidden lg:block lg:w-1/3 xl:w-1/2 h-full bg-blue-400"></div>
+        <div className="hidden lg:block lg:w-1/3 xl:w-1/2 h-full  sticky top-0">
+          <Brain scrollYProgress={scrollYProgress} />
+        </div>
       </div>
     </motion.div>
   );
@@ -241,9 +251,27 @@ export default function About() {
  * @Improvement
  * experience la content production ku varum bothu changes pananum
  *
- * 
- * about 
+ *
+ * about
  * mobile la - no brain svg - i will add it later
  * lg 2:1
  * xl 1:1
+ */
+/**
+ * inga nama y axis values ah vaangi deg ah transform pannuvom
+ * ithu rotate pandrathukanada logic
+ *
+ * first we need to get the scrollYProgress from framer-motion
+ * then we transform into deg
+ *
+ * inga scrollYProgress 0 to 1 la than irukum - ihu scrollYProgress oda valu
+ * itha vechi nama namaku thavanaya range la value vanga useTransform hook ah use pannuvom
+ * useTransform(scrollYProgress,[scrollYProgress - itha vechi than deg ah calculate panna bothu],[namaku tevayana deg values])
+ *
+ * 
+ *  initail and animate and exit ithu ellam page load and unload agum bothu
+ * 
+ * dynmaic ah animation nadakurathu js moolima than nadakum - athuku style={{ rotate: rotate }} maari use pannuvom
+ * 
+ * conditinal animation um ithula one of the way
  */
