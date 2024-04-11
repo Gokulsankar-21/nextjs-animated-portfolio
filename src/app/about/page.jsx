@@ -35,7 +35,7 @@ export default function About() {
     >
       <div className="h-full overflow-scroll lg:flex lg:flex-row">
         {/* --TEXT CONTAINER--  */}
-        <div className="p-4 sm:p-8 md:p-12  lg:p-24 xl:p-28 flex flex-col gap-24 md:gap-32 xl:gap-48 lg:w-1/2 lg:pr-0">
+        <div className="p-4 sm:p-8 md:p-12  lg:p-24 xl:p-28 flex flex-col gap-24 md:gap-32 xl:gap-48 lg:w-2/3 xl:w-1/2 lg:pr-0 xl:pr-0">
           {/* BIOGRAPHY - 1*/}
           <div className="flex flex-col gap-12 justify-center">
             {/* BIOGRAPHY TITLE */}
@@ -56,7 +56,7 @@ export default function About() {
             </span>
 
             {/* BIOGRAPHY SIGNATURE */}
-            <div className="pl-60 self-center">
+            <div className="pl-40 self-center">
               <Image
                 src="/signature.png"
                 alt="signature"
@@ -117,7 +117,7 @@ export default function About() {
             {/* EXPERIENCE LIST CONTAINER */}
             <div className="">
               {/* EXPERIENCE LIST ITEM - 1 */}
-              <div className="w-full flex gap-8">
+              <div className=" flex justify-between h-48">
                 {/* LEFT */}
                 <div className="w-1/3 flex flex-col gap-2">
                   {/* JOB TITLE */}
@@ -130,22 +130,22 @@ export default function About() {
                     frameworks.
                   </div>
                   {/* JOB TIME */}
-                  <div className="p-1 text-sm font-bold text-red-400">
+                  <div className="p-3 text-sm font-bold text-red-400">
                     2024 - Present
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 text-sm bg-white font-bold w-fit">
+                  <div className="ml-3 p-1 text-sm bg-white font-bold w-fit">
                     Apple
                   </div>
                 </div>
                 {/* CENTER */}
-                <div className="w-1/6 ">
+                <div className="w-1/6 bg-blue-400">
                   {/* LINE */}
                   <div className="w-1 flex justify-center bg-gray-600 h-full relative">
                     {/* LINE CIRCLE */}
                     <div
                       className="w-5 h-5 bg-white rounded-full
-                     border-2 border-red-400 absolute top-0"
+                      ring-4 ring-red-400 absolute "
                     ></div>
                   </div>
                 </div>
@@ -154,7 +154,7 @@ export default function About() {
               </div>
 
               {/* EXPERIENCE LIST ITEM - 2 */}
-              <div className="w-full flex gap-8">
+              <div className="flex justify-between h-48">
                 {/* LEFT */}
                 <div className="w-1/3 ">{/*EMPTY */}</div>
 
@@ -165,7 +165,7 @@ export default function About() {
                     {/* LINE CIRCLE */}
                     <div
                       className="w-5 h-5 bg-white rounded-full
-                     border-2 border-red-400 absolute top-0"
+                      ring-4 ring-red-400 absolute "
                     ></div>
                   </div>
                 </div>
@@ -181,18 +181,18 @@ export default function About() {
                     frameworks.
                   </div>
                   {/* JOB TIME */}
-                  <div className="p-1 text-sm font-bold text-red-400">
+                  <div className="p-3  text-sm font-bold text-red-400">
                     2024 - Present
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 text-sm bg-white font-bold w-fit">
+                  <div className="ml-3 p-1 text-sm bg-white font-bold w-fit">
                     Apple
                   </div>
                 </div>
               </div>
 
               {/* EXPERIENCE LIST ITEM - 3 */}
-              <div className="w-full flex gap-8">
+              <div className="flex justify-between h-48">
                 {/* LEFT */}
                 <div className="w-1/3 flex flex-col gap-2">
                   {/* JOB TITLE */}
@@ -205,11 +205,11 @@ export default function About() {
                     frameworks.
                   </div>
                   {/* JOB TIME */}
-                  <div className="p-1 text-sm font-bold text-red-400">
+                  <div className="p-3 text-sm font-bold text-red-400">
                     2024 - Present
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="p-1 text-sm bg-white font-bold w-fit">
+                  <div className="ml-3 p-1 text-sm bg-white font-bold w-fit">
                     Apple
                   </div>
                 </div>
@@ -220,7 +220,7 @@ export default function About() {
                     {/* LINE CIRCLE */}
                     <div
                       className="w-5 h-5 bg-white rounded-full
-                     border-2 border-red-400 absolute top-0"
+                     ring-4 ring-red-400 absolute "
                     ></div>
                   </div>
                 </div>
@@ -232,7 +232,7 @@ export default function About() {
         </div>
 
         {/* SVG CONTAINER  */}
-        <div className="hidden lg:block lg:w-1/2 h-full bg-blue-400"></div>
+        <div className="hidden lg:block lg:w-1/3 xl:w-1/2 h-full bg-blue-400"></div>
       </div>
     </motion.div>
   );
@@ -241,4 +241,9 @@ export default function About() {
  * @Improvement
  * experience la content production ku varum bothu changes pananum
  *
+ * 
+ * about 
+ * mobile la - no brain svg - i will add it later
+ * lg 2:1
+ * xl 1:1
  */
