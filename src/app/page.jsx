@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 const Homepage = () => {
   return (
     <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12  lg:px-24 xl:px-28 ">
@@ -33,4 +34,5 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+
+export default Homepage

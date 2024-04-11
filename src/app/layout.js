@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
+import TransitionProvider from "./components/TransitionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,18 +14,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-screen h-screen bg-gradient-to-b from-blue-50 to-red-50">
-          <div className=" h-20 sm:h-24">
-            <NavBar />
+        <TransitionProvider>
+          <div className="w-screen h-screen bg-gradient-to-b from-blue-50 to-red-50">
+            <div className=" h-20 sm:h-24">
+              <NavBar />
+            </div>
+            <div className="h-[calc(100vh-6rem)]">{children}</div>
           </div>
-          <div className="h-[calc(100vh-6rem)]">{children}</div>
-        </div>
+        </TransitionProvider>
       </body>
     </html>
   );
 }
 
 /**
- * calc(100vh-6rem) - no space 
- * 
+ * calc(100vh-6rem) - no space
+ *
  */
