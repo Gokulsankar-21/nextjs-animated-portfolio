@@ -29,7 +29,7 @@ export default function About() {
   ];
 
   const containerRef = useRef();
-  const {scrollYProgress} = useScroll({ container: containerRef });
+  const { scrollYProgress } = useScroll({ container: containerRef });
   console.log(scrollYProgress);
   return (
     <motion.div
@@ -258,20 +258,22 @@ export default function About() {
  * xl 1:1
  */
 /**
- * inga nama y axis values ah vaangi deg ah transform pannuvom
- * ithu rotate pandrathukanada logic
+ * # inga nama y axis values ah vaangi deg ah transform pannuvom
+ * # ithu rotate pandrathukanada logic
  *
- * first we need to get the scrollYProgress from framer-motion
- * then we transform into deg
+ * # first we need to get the scrollYProgress from framer-motion
+ * # then we transform into deg
  *
- * inga scrollYProgress 0 to 1 la than irukum - ihu scrollYProgress oda valu
- * itha vechi nama namaku thavanaya range la value vanga useTransform hook ah use pannuvom
- * useTransform(scrollYProgress,[scrollYProgress - itha vechi than deg ah calculate panna bothu],[namaku tevayana deg values])
+ *    # inga scrollYProgress 0 to 1 la than irukum - ihu scrollYProgress oda valu
+ *    # itha vechi nama namaku thavanaya range la value vanga useTransform hook ah use pannuvom
+ *    # useTransform(scrollYProgress,[scrollYProgress - itha vechi than deg ah calculate panna bothu],[namaku tevayana deg values])
  *
- * 
- *  initail and animate and exit ithu ellam page load and unload agum bothu
- * 
+ *    # initail and animate and exit ithu ellam page load and unload agum bothu
+ *
  * dynmaic ah animation nadakurathu js moolima than nadakum - athuku style={{ rotate: rotate }} maari use pannuvom
- * 
  * conditinal animation um ithula one of the way
+ *
+ *  ithae maari than project - y axis vechi  x axis ah move pannuvom
+ *  ithuku pakkavana animation logic irukanum
+ *
  */
