@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import Brain from "../components/Brain";
 
@@ -32,13 +32,13 @@ export default function About() {
   const { scrollYProgress } = useScroll({ container: containerRef });
   // console.log(scrollYProgress);
 
-  // conditional Animation - useView
+  // conditional Animation - useInView
   
   const skillRef=useRef();
-  const isSkillInViewPort = useView(skillRef);
+  const isSkillInViewPort = useInView(skillRef);
 
   const experienceRef = useRef();
-  const isExperienceInViewPort = useView(experienceRef)
+  const isExperienceInViewPort = useInView(experienceRef)
   return (
     <motion.div
       initial={{ y: "-200vh" }}
@@ -84,10 +84,14 @@ export default function About() {
 
             {/* BIOGRAPHY SCROLL SVG  */}
             <div className="">
-              <svg
+              <motion.svg 
+              initial={{opacity:0.2,y:'0'}}
+              animate={{opacity:1,y:'10px'}}
+              
+              transition={{repeat:Infinity,duration:3,ease:'easeInOut'}}
                 viewBox="0 0 24 24"
                 fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                xmlns="http://www.w3.org/2000/motion.svg"
                 width={50}
                 height={50}
               >
@@ -102,17 +106,17 @@ export default function About() {
                   stroke="#000000"
                   strokeWidth="1"
                 ></path>
-              </svg>
+              </motion.svg>
             </div>
           </div>
 
           {/* SKILLS - 2 */}
-          <motion.div  className="flex flex-col gap-12 justify-center" ref={skillRef}>
+          <div  className="flex flex-col gap-12 justify-center" ref={skillRef}>
             {/* SKILL TITLE */}
-            <motion.h1 initial={{ x: '-300px' }} animate={ isSkillInViewPort ?{ x:0} :{}} transition={{delay:0.2,ease:'easeInOut'}} className="text-2xl font-bold">SKILLS</motion.h1>
+            <motion.h1 initial={{ x: '-300px' }} animate={ isSkillInViewPort ?{ x:0} :{}} transition={{delay:0.2}} className="text-2xl font-bold">SKILLS</motion.h1>
 
             {/* SKILL LIST */}
-            <motion.ul initial={{ x: '-300px' }} animate={ isSkillInViewPort ?{ x:0} :{}}transition={{delay:0.2,ease:'easeInOut'}} className="flex gap-4 md:gap-6 flex-wrap">
+            <motion.ul initial={{ x: '-300px' }} animate={ isSkillInViewPort ?{ x:0} :{}} transition={{delay:0.2}} className="flex gap-4 md:gap-6 flex-wrap">
               {/* SKILL LIST ITEM */}
               {skills.map((skill) => (
                 <li
@@ -124,14 +128,42 @@ export default function About() {
                 </li>
               ))}
             </motion.ul>
-          </motion.div>
+            
+
+             {/* SKILL SCROLL SVG  */}
+             <div className="">
+              <motion.svg 
+              initial={{opacity:0.2,y:'0'}}
+              animate={{opacity:1,y:'10px'}}
+              transition={{repeat:Infinity,duration:3,ease:'easeInOut'}}
+              
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/motion.svg"
+                width={50}
+                height={50}
+              >
+                <path
+                  d="M5 15C5 16.8565 5.73754 18.6371 7.05029 19.9498C8.36305 21.2626 10.1435 21.9999 12 21.9999C13.8565 21.9999 15.637 21.2626 16.9498 19.9498C18.2625 18.6371 19 16.8565 19 15V9C19 7.14348 18.2625 5.36305 16.9498 4.05029C15.637 2.73754 13.8565 2 12 2C10.1435 2 8.36305 2.73754 7.05029 4.05029C5.73754 5.36305 5 7.14348 5 9V15Z"
+                  stroke="#000000"
+                  strokeWidth="1"
+                ></path>
+                <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
+                <path
+                  d="M15 11L12 14L9 11"
+                  stroke="#000000"
+                  strokeWidth="1"
+                ></path>
+              </motion.svg>
+            </div>
+          </div>
 
           {/* EXPERIENCE - 3*/}
           <div  className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
             {/* EXPERIENCE TITLE */}
-            <motion.h1 initial={{ x: '-300px' }} animate={ isSkillInViewPort ?{ x:0} :{}} transition={{delay:0.2,ease:'easeInOut'}} className="text-2xl font-bold">EXPERIENCE</motion.h1>
+            <motion.h1 initial={{ x: '-300px' }} animate={ isExperienceInViewPort ?{ x:0} :{}} transition={{delay:0.2}} className="text-2xl font-bold">EXPERIENCE</motion.h1>
             {/* EXPERIENCE LIST CONTAINER */}   
-            <motion.div initial={{ x: '-300px' }} animate={ isSkillInViewPort ?{ x:0} :{}} transition={{delay:0.2,ease:'easeInOut'}} className="">
+            <motion.div initial={{ x: '-300px' }} animate={ isExperienceInViewPort ?{ x:0} :{}} transition={{delay:0.2}} className="">
               {/* EXPERIENCE LIST ITEM - 1 */}
               <div className=" flex justify-between h-48">
                 {/* LEFT */}
