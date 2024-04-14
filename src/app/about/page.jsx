@@ -81,7 +81,7 @@ export default function About() {
 
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              As a frontend developer and UI designer, I'm dedicated to creating
+              As a frontend developer and UI designer, I&apos;m dedicated to creating
               seamless digital experiences. I focus on user-centric design
               principles to craft elegant interfaces that blend aesthetics with
               functionality. My passion lies in shaping the digital landscape
