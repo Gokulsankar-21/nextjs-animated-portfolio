@@ -40,7 +40,7 @@ export default function Contact() {
     >
       {/* TEXT CONTAINER  */}
       <div className="flex flex-col h-full lg:flex-row items-center justify-center px-4 sm:px-8 md:px-12  lg:px-24 xl:px-28">
-        <div className="h-1/3 lg:h-full lg:w-1/2 text-4xl md:text-6xl flex items-center justify-center gap-1">
+        <div className="h-1/3 lg:h-full lg:w-1/2 text-4xl md:text-6xl flex items-center justify-center gap-1 my-4 md:my-0">
           {text.split("").map((letter, index) => (
             <motion.span
               initial={{ opacity: 1 }}

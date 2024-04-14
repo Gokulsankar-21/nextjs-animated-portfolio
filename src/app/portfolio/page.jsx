@@ -7,35 +7,35 @@ import Link from "next/link";
 const projects = [
   {
     id: 1,
-    color: "from-red-100 to-blue-100",
+    color: "from-red-200 to-blue-200",
     title: "Mern Blog App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://gokuldev.in",
+    img: "/Project_Images/Blog.png",
+    link: "https://blog.gokuldev.in",
   },
   {
     id: 2,
-    color: "from-blue-100 to-violet-100",
+    color: "from-blue-200 to-violet-200",
     title: "Book Store App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://gokuldev.in",
+    img: "/Project_Images/Blog.png",
+    link: "https://book.gokuldev.in",
   },
   {
     id: 3,
-    color: "from-violet-100 to-purple-100",
+    color: "from-violet-200 to-purple-200",
     title: "IMDB Clone App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://gokuldev.in",
+    img: "/Project_Images/Blog.png",
+    link: "https://movie.gokuldev.in",
   },
   {
     id: 4,
-    color: "from-purple-100 to-red-100",
+    color: "from-purple-200 to-red-200",
     title: "Socio Pedia App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://gokuldev.in",
+    img: "/Project_Images/Blog.png",
+    link: "https://social.gokuldev.in",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Portfolio() {
           <span className="text-8xl text-center">My Works</span>
 
           {/* BIOGRAPHY SCROLL SVG  */}
-          <div className="">
+          <div className=" pt-10 scale-125 md:scale-150">
             <motion.svg
               initial={{ opacity: 0.2, y: "0" }}
               animate={{ opacity: 1, y: "10px" }}
@@ -91,24 +91,24 @@ export default function Portfolio() {
 
           {/* Intha container than move panna poren */}
           <motion.div className="flex " style={{ x }}>
-            <div className="w-screen h-screen flex items-center justify-center bg-gradient-to-r from-purple-100 to-red-100" />
+            <div className="w-screen h-screen flex items-center justify-center bg-gradient-to-r from-purple-200 to-red-200" />
 
             {/* PROJECT LIST CONTAINER*/}
             {projects.map((project) => (
               // PROJECT CONTAINER -project container ovvonum 100vh 100vw - itha than nama flex items ah vekrom
               <div
                 key={project.id}
-                className={`w-screen h-screen flex items-center justify-center bg-gradient-to-r ${project.color}`}
+                className={`w-screen h-screen flex items-center justify-center bg-gradient-to-r rounderd ${project.color}`}
               >
                 {/* PROJECT INFO */}
                 <div className="flex flex-col gap-8 text-white">
                   {/* PROJECT TITLE */}
-                  <h1 className="text-3xl font-bold  md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-gray-700">
+                  <h1 className="text-3xl font-bold  md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-gray-700 md:text-red-500 lg:text-blue-400">
                     {project.title}
                   </h1>
 
                   {/* PROJECT IMAGE */}
-                  <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[400px] lg:h-[300px] xl:w-[500px] xl:h-[350px] 2xl:w-[600px] 2xl:h-[420px]">
+                  <div className="relative w-80 h-48 md:w-[390px] md:h-60 lg:w-[460px] lg:h-[270px] xl:w-[510px] xl:h-[300px] 2xl:w-[570px] 2xl:h-[350px] ">
                     <Image src={project.img} alt={project.title} fill />
                     {/* Next js la imaeg intha maari optimize pannalam */}
                   </div>
