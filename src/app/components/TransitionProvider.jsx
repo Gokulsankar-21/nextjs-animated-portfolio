@@ -10,7 +10,7 @@ export default function TransitionProvider({ children }) {
     <AnimatePresence mode="wait">
       <div
         key={pathName}
-        className="w-screen h-screen bg-gradient-to-b from-blue-50 to-red-50 "
+        className="w-screen h-screen bg-gradient-to-b from-blue-100 to-red-100 "
       >
         {/* 1st div */}
         <motion.div
