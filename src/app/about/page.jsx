@@ -81,16 +81,16 @@ export default function About() {
 
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              As a frontend developer and UI designer, I&apos;m dedicated to creating
-              seamless digital experiences. I focus on user-centric design
-              principles to craft elegant interfaces that blend aesthetics with
-              functionality. My passion lies in shaping the digital landscape
-              with purpose and innovation.
+              As a frontend developer and UI designer, I&apos;m dedicated to
+              creating seamless digital experiences. I focus on user-centric
+              design principles to craft elegant interfaces that blend
+              aesthetics with functionality. My passion lies in shaping the
+              digital landscape with purpose and innovation.
             </p>
 
             {/* BIOGRAPHY QUOTES */}
             <span className="italic text-gray-700">
-              "I am Always Working on Projects."
+              &quot;I am Always Working on Projects&quot;
             </span>
 
             {/* BIOGRAPHY SIGNATURE */}
@@ -333,15 +333,22 @@ export default function About() {
           <div className="relative flex items-center justify-center p-1">
             <motion.a
               href="/GokulDev_Resume.pdf"
-              initial={{border:'3px',borderColor:'red'}}
-              animate={{border:'3px',borderColor:'red'}}
+              initial={{ border: "3px", borderColor: "red" }}
+              animate={{ border: "3px", borderColor: "red" }}
               download
               className="p-2 xl:p-4 bg-slate-800 text-white hover:scale-110 hover:shadow-sm transition duration-300 absolute -top-40 md:-top-48 left-1/3 rounded-lg block border "
-
             >
               Download Resume
             </motion.a>
-            <span>@Copyright 2024, Designed by <a href="https://linkedin.com/gokulsankar-thangaraj" className="text-violer-500">GokulDev</a></span>
+            <span>
+              @Copyright 2024, Designed by{" "}
+              <a
+                href="https://linkedin.com/gokulsankar-thangaraj"
+                className="text-violer-500"
+              >
+                GokulDev
+              </a>
+            </span>
           </div>
         </div>
 
