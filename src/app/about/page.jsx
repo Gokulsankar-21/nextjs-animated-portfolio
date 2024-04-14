@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import Brain from "../components/Brain";
+import Link from "next/link";
 
 export default function About() {
   const skills = [
@@ -11,21 +12,34 @@ export default function About() {
     { skill: "Node.js" },
     { skill: "Next.js" },
     { skill: "Express.js" },
-    { skill: "Tailwind CSS" },
+    { skill: "API" },
     { skill: "Mongo DB" },
+    { skill: "Tailwind CSS" },
     { skill: "Web Socket" },
+    { skill: "Cloud Computing" },
     { skill: "Redux" },
+    { skill: "Docker" },
     { skill: "Git" },
     { skill: "GitHub" },
-    { skill: "Docker" },
-    { skill: "AWS " },
-    { skill: "Firebase" },
-    { skill: "VS Code" },
-    { skill: "Framer Motion" },
-    { skill: "Webpack" },
+    { skill: "npm" },
+    { skill: "AWS" },
+    { skill: "EC2" },
+    { skill: "SSH" },
+    { skill: "JEST " },
     { skill: "Vite" },
-    { skill: "Flow-bite" },
+    { skill: "Vitest " },
+    { skill: "Firebase" },
+    { skill: "Webpack" },
+    { skill: "VS Code" },
     { skill: "Material UI" },
+    { skill: "HTML" },
+    { skill: "CSS" },
+    { skill: "C" },
+    { skill: "C++" },
+    { skill: "OOP" },
+    { skill: "Python" },
+    { skill: "Pup" },
+    { skill: "Framer Motion" },
   ];
 
   const containerRef = useRef();
@@ -33,12 +47,12 @@ export default function About() {
   // console.log(scrollYProgress);
 
   // conditional Animation - useInView
-  
-  const skillRef=useRef();
+
+  const skillRef = useRef();
   const isSkillInViewPort = useInView(skillRef);
 
   const experienceRef = useRef();
-  const isExperienceInViewPort = useInView(experienceRef)
+  const isExperienceInViewPort = useInView(experienceRef);
   return (
     <motion.div
       initial={{ y: "-200vh" }}
@@ -47,13 +61,22 @@ export default function About() {
       transition={{ duration: 1, ease: "easeOut" }}
     >
       <div
-        className="h-full overflow-scroll lg:flex lg:flex-row"
+        className="h-full overflow-scroll lg:flex lg:flex-row overflow-x-hidden"
         ref={containerRef}
       >
         {/* --TEXT CONTAINER--  */}
-        <div className="p-4 sm:p-8 md:p-12  lg:p-24 xl:p-28 flex flex-col gap-24 md:gap-32 xl:gap-48 lg:w-2/3 xl:w-1/2 lg:pr-0 xl:pr-0">
+        <div className="p-4 sm:p-8 md:p-12  lg:p-24 xl:p-28 flex flex-col gap-24 md:gap-32 xl:gap-48 lg:w-2/3 xl:w-1/2 lg:pr-0 xl:pr-0 lg:pt-4 xl:pt-8">
           {/* BIOGRAPHY - 1*/}
           <div className="flex flex-col gap-10 justify-center">
+            {/* PROFILE  */}
+            <div className="relative w-28 h-28 md:w-40 md:h-40 xl:w-52 xl:h-52 rounded-full  ring-4 ring-white ">
+              <Image
+                src={"/hero.png"}
+                alt="profile"
+                fill
+                style={{ objectFit: "contain" }}
+              />
+            </div>
             {/* BIOGRAPHY TITLE */}
             <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
 
@@ -84,11 +107,14 @@ export default function About() {
 
             {/* BIOGRAPHY SCROLL SVG  */}
             <div className="">
-              <motion.svg 
-              initial={{opacity:0.2,y:'0'}}
-              animate={{opacity:1,y:'10px'}}
-              
-              transition={{repeat:Infinity,duration:3,ease:'easeInOut'}}
+              <motion.svg
+                initial={{ opacity: 0.2, y: "0" }}
+                animate={{ opacity: 1, y: "10px" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/motion.svg"
@@ -111,16 +137,28 @@ export default function About() {
           </div>
 
           {/* SKILLS - 2 */}
-          <div  className="flex flex-col gap-12 justify-center" ref={skillRef}>
+          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
             {/* SKILL TITLE */}
-            <motion.h1 initial={{ x: '-300px' }} animate={ isSkillInViewPort ?{ x:0} :{}} transition={{delay:0.2}} className="text-2xl font-bold">SKILLS</motion.h1>
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isSkillInViewPort ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="text-2xl font-bold"
+            >
+              SKILLS
+            </motion.h1>
 
             {/* SKILL LIST */}
-            <motion.ul initial={{ x: '-300px' }} animate={ isSkillInViewPort ?{ x:0} :{}} transition={{delay:0.2}} className="flex gap-4 md:gap-6 flex-wrap">
+            <motion.ul
+              initial={{ x: "-300px" }}
+              animate={isSkillInViewPort ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="flex gap-4 md:gap-6 flex-wrap"
+            >
               {/* SKILL LIST ITEM */}
               {skills.map((skill) => (
                 <li
-                  key={skill.skill}    
+                  key={skill.skill}
                   className="p-2 bg-black text-white hover:bg-white hover:text-black cursor-pointer
                 rounded"
                 >
@@ -128,15 +166,17 @@ export default function About() {
                 </li>
               ))}
             </motion.ul>
-            
 
-             {/* SKILL SCROLL SVG  */}
-             <div className="">
-              <motion.svg 
-              initial={{opacity:0.2,y:'0'}}
-              animate={{opacity:1,y:'10px'}}
-              transition={{repeat:Infinity,duration:3,ease:'easeInOut'}}
-              
+            {/* SKILL SCROLL SVG  */}
+            <div className="">
+              <motion.svg
+                initial={{ opacity: 0.2, y: "0" }}
+                animate={{ opacity: 1, y: "10px" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 3,
+                  ease: "easeInOut",
+                }}
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/motion.svg"
@@ -159,32 +199,45 @@ export default function About() {
           </div>
 
           {/* EXPERIENCE - 3*/}
-          <div  className="flex flex-col gap-12 justify-center pb-48" ref={experienceRef}>
+          <div
+            className="flex flex-col gap-12 justify-center pb-48"
+            ref={experienceRef}
+          >
             {/* EXPERIENCE TITLE */}
-            <motion.h1 initial={{ x: '-300px' }} animate={ isExperienceInViewPort ?{ x:0} :{}} transition={{delay:0.2}} className="text-2xl font-bold">EXPERIENCE</motion.h1>
-            {/* EXPERIENCE LIST CONTAINER */}   
-            <motion.div initial={{ x: '-300px' }} animate={ isExperienceInViewPort ?{ x:0} :{}} transition={{delay:0.2}} className="">
+            <motion.h1
+              initial={{ x: "-300px" }}
+              animate={isExperienceInViewPort ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className="text-2xl font-bold"
+            >
+              EXPERIENCE
+            </motion.h1>
+            {/* EXPERIENCE LIST CONTAINER */}
+            <motion.div
+              initial={{ x: "-300px" }}
+              animate={isExperienceInViewPort ? { x: 0 } : {}}
+              transition={{ delay: 0.2 }}
+              className=""
+            >
               {/* EXPERIENCE LIST ITEM - 1 */}
               <div className=" flex justify-between h-48">
                 {/* LEFT */}
                 <div className="w-1/3 flex flex-col gap-2">
                   {/* JOB TITLE */}
                   <div className="p-3 font-bold text-black bg-white rounded-s-lg rounded-b-lg">
-                    JavaScript Intern
+                    Self Developer
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I led web development, offering expertise in JavaScript
-                    frameworks.
+                    Working on Personal Projects and Building fully functional
+                    Web App using Advanced Technologies.
                   </div>
                   {/* JOB TIME */}
                   <div className="p-3 text-sm font-bold text-red-400">
-                    2024 - Present
+                    Jan 2024 - Present
                   </div>
                   {/* JOB COMPANY */}
-                  <div className="ml-3 p-1 text-sm bg-white font-bold w-fit">
-                    Apple
-                  </div>
+                  <div className="ml-3 p-1 text-sm bg-white font-bold w-fit hidden"></div>
                 </div>
                 {/* CENTER */}
                 <div className="w-1/6">
@@ -221,20 +274,20 @@ export default function About() {
                 <div className="w-1/3 flex flex-col gap-2">
                   {/* JOB TITLE */}
                   <div className="p-3 font-bold text-black bg-white rounded-s-lg rounded-b-lg">
-                    JavaScript Intern
+                    Web dev Intern
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I led web development, offering expertise in JavaScript
-                    frameworks.
+                    Developed interactive features, Implemented responsive
+                    design principles to optimize UX.
                   </div>
                   {/* JOB TIME */}
                   <div className="p-3  text-sm font-bold text-red-400">
-                    2024 - Present
+                    Dec 2023 - Jan 2024
                   </div>
                   {/* JOB COMPANY */}
                   <div className="ml-3 p-1 text-sm bg-white font-bold w-fit">
-                    Apple
+                    Octa Net
                   </div>
                 </div>
               </div>
@@ -245,20 +298,20 @@ export default function About() {
                 <div className="w-1/3 flex flex-col gap-2">
                   {/* JOB TITLE */}
                   <div className="p-3 font-bold text-black bg-white rounded-s-lg rounded-b-lg">
-                    JavaScript Intern
+                    Internship
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I led web development, offering expertise in JavaScript
-                    frameworks.
+                    Building the Task management, Implemented the CRUD features
+                    to manage tasks
                   </div>
                   {/* JOB TIME */}
                   <div className="p-3 text-sm font-bold text-red-400">
-                    2024 - Present
+                    Nov 2023 - Dec 2023
                   </div>
                   {/* JOB COMPANY */}
                   <div className="ml-3 p-1 text-sm bg-white font-bold w-fit">
-                    Apple
+                    Innovation Tech
                   </div>
                 </div>
                 {/* CENTER */}
@@ -276,8 +329,21 @@ export default function About() {
                 <div className="w-1/3 ">{/*EMPTY */}</div>
               </div>
             </motion.div>
-            </div>
+          </div>
 
+          <div className="relative flex items-center justify-center p-1">
+            <motion.a
+              href="/GokulDev_Resume.pdf"
+              initial={{border:'3px',borderColor:'red'}}
+              animate={{border:'3px',borderColor:'red'}}
+              download
+              className="p-2 xl:p-4 bg-slate-800 text-white hover:scale-110 hover:shadow-sm transition duration-300 absolute -top-40 md:-top-48 left-1/3 rounded-lg block border "
+
+            >
+              Download Resume
+            </motion.a>
+            <span>@Copyright 2024, Designed by <a href="https://linkedin.com/gokulsankar-thangaraj" className="text-violer-500">GokulDev</a></span>
+          </div>
         </div>
 
         {/* SVG CONTAINER  */}
