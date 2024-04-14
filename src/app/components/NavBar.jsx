@@ -91,38 +91,34 @@ export default function NavBar() {
         {/* LOGO */}
         <Link
           href="/"
-          className=" bg-black p-1 rounded-md text-sm font-semibold flex items-center justify-center "
+          className=" bg-black p-1  rounded-md text-[17px] font-semibold flex items-center justify-center "
         >
-          <span className=" text-white pr-1">Gokul</span>
+          <span className=" text-white  pr-1">Gokul</span>
           <span className="bg-white w-12 h-8 text-black rounded flex justify-center items-center">
             .dev
           </span>
         </Link>
       </div>
       {/* SOCIAL */}
-      <div className="hidden md:flex gap-4 w-1/3  md:justify-end ">
+      <div className="hidden md:flex gap-8 w-1/3  md:justify-end ">
         <Link href="https://github.com/Gokulsankar-21">
           <Image src="/github.png" width={24} height={24} alt="github" />
         </Link>
         <Link href="https://github.com/Gokulsankar-21">
           <Image src="/linkedin.png" width={24} height={24} alt="linkedin" />
         </Link>
+        <span>
+          <a
+            href="/GokulDev_Resume.pdf"
+            download
+            className="ring-black ring-1 bg-transparent text-black hover:bg-black hover:text-white text-lg  px-2 py-2 rounded-md"
+          >
+            Resume
+          </a>
+        </span>
 
-        <Link href="https://github.com/Gokulsankar-21">
-          <Image src="/instagram.png" width={24} height={24} alt="instagram" />
-        </Link>
-
-        <Link href="https://github.com/Gokulsankar-21">
-          <Image src="/facebook.png" width={24} height={24} alt="facebook" />
-        </Link>
-
-        <Link href="https://github.com/Gokulsankar-21">
-          <Image src="/dribbble.png" width={24} height={24} alt="dribbble" />
-        </Link>
-
-        <Link href="https://github.com/Gokulsankar-21">
-          <Image src="/pinterest.png" width={24} height={24} alt="pinterest" />
-        </Link>
+        {/* Dark Theme */}
+        {/* Download CV */}
       </div>
 
       {/* RESPONSIVE MENU BUTTON */}
