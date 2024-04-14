@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { motion, useInView, useScroll } from "framer-motion";
 import Image from "next/image";
 import Brain from "../components/Brain";
-import Link from "next/link";
 
 export default function About() {
   const skills = [

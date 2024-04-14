@@ -23,21 +23,21 @@ const variants = {
   },
 };
 
-const rotaionVariants = {// ithuku innum  sila thevai iruku
-  startPos: {
-    x: 0,
-    y: 0,
-    opacity: 0,
-  },
-  animatePos: {
-    x: 0,
-    y: 0,
-    opacity: 0
+// const rotaionVariants = {// ithuku innum  sila thevai iruku
+//   startPos: {
+//     x: 0,
+//     y: 0,
+//     opacity: 0,
+//   },
+//   animatePos: {
+//     x: 0,
+//     y: 0,
+//     opacity: 0
     
-  },
-  // 25% top, 50% right, 75% bottom , 100% left - intha way terinja ithu innum easy
-  // tennis bol maari alaga bounce aganum - beautiful animation speed oda - panna vali kandu pidi - ithu enaku pidichi iruku - detailed ah kathukirathu
-};
+//   },
+//   // 25% top, 50% right, 75% bottom , 100% left - intha way terinja ithu innum easy
+//   // tennis bol maari alaga bounce aganum - beautiful animation speed oda - panna vali kandu pidi - ithu enaku pidichi iruku - detailed ah kathukirathu
+// };
 export default function AnimationTest() {
   return (
     <>
