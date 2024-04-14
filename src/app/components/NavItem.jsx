@@ -3,11 +3,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function NavItem({ link }) {
-    const pathName = usePathname();
-    console.log(pathName);
+  const pathName = usePathname();
+  console.log(pathName);
   return (
-
-    <Link href={link.url} className={`p-1 rounded text-black ${pathName === link.url && 'bg-black text-white'}`}>
+    <Link
+      href={link.url}
+      className={`p-1 rounded text-black ${
+        pathName === link.url && "bg-black text-white"
+      } hover:bg-black hover:text-white`}
+    >
       {link.title}
     </Link>
   );
