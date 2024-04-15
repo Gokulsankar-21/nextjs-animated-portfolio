@@ -101,10 +101,13 @@ export default function NavBar() {
       </div>
       {/* SOCIAL */}
       <div className="hidden md:flex gap-8 w-1/3  md:justify-end ">
-        <Link href="https://github.com/Gokulsankar-21">
+        <Link href="https://github.com/Gokulsankar-21" target="_blank">
           <Image src="/github.png" width={24} height={24} alt="github" />
         </Link>
-        <Link href="https://github.com/Gokulsankar-21">
+        <Link
+          href="https://linkedin.com/in/gokulsankar-thangaraj"
+          target="_blank"
+        >
           <Image src="/linkedin.png" width={24} height={24} alt="linkedin" />
         </Link>
         <span>

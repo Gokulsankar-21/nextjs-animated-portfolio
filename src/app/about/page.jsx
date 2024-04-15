@@ -12,6 +12,7 @@ export default function About() {
     { skill: "Next.js" },
     { skill: "Express.js" },
     { skill: "API" },
+    { skill: "AJAX" },
     { skill: "Mongo DB" },
     { skill: "Tailwind CSS" },
     { skill: "Web Socket" },
