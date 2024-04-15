@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Gokuk Dev Portfolio App",
   description: "Best Animated Portfolio Ever",
+  
 };
 
 export default function RootLayout({ children }) {
