@@ -17,7 +17,7 @@ export default function TransitionProvider({ children }) {
           className="bg-black w-screen h-screen fixed z-30 rounded-b-[100px]"
           initial={{ height: "140vh" }}
           animate={{ height: "0vh" }}
-          exit={{ height: "140vh", backgroundColor: "rgb(0,0,0)" }}
+          exit={{ height: "140vh", backgroundColor: "rgb(0,0,0)",zIndex:'100' }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         />
         {/* PATH NAME */}
