@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     color: "from-red-200 to-blue-200",
     title: "Mern Blog App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
+    desc: "Developed a Single Page Personal Blog App using the MERN stack, Implemented user authentication and authorization with Admin Dashboard",
     img: "/Project_Images/Blog.png",
     link: "https://blog.gokuldev.in",
   },
@@ -37,13 +37,21 @@ const projects = [
     img: "/Project_Images/Blog.png",
     link: "https://social.gokuldev.in",
   },
+  {
+    id: 5,
+    color: "from-purple-200 to-red-200",
+    title: "Amazon UI Clone",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
+    img: "/Project_Images/Blog.png",
+    link: "https://amazon.gokuldev.in",
+  },
 ];
 
 export default function Portfolio() {
   // Horizandal scroll animation
   const ref = useRef();
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]); //inga nama x la - ku move padnrom ex:-100px y values vechi x la % moolima ana horizontal ah move panna porom.
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-83%"]); //inga nama x la - ku move padnrom ex:-100px y values vechi x la % moolima ana horizontal ah move panna porom.
   // sticky moolima nama x axis la move pannuvom but background la ethuvum iruakthu sticky nala athu z-index la top la irukum
   return (
     <motion.div
@@ -103,7 +111,7 @@ export default function Portfolio() {
                 {/* PROJECT INFO */}
                 <div className="flex flex-col gap-8 text-white">
                   {/* PROJECT TITLE */}
-                  <h1 className="text-3xl font-bold  md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-gray-700 md:text-red-500 lg:text-blue-400">
+                  <h1 className="text-3xl font-bold  md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-gray-700 ">
                     {project.title}
                   </h1>
 
@@ -118,7 +126,7 @@ export default function Portfolio() {
                     {project.desc}
                   </p>
                   <div className=" flex justify-end lg:translate-x-1/3">
-                    <Link href={project.link}>
+                    <Link href={project.link} target="_blank">
                       <button className="p-2 text-sm  font-semibold text-slate-600 md:p-4 md:text-lg lg:p-6 xl:p-8 rounded bg-white hover:scale-110 transition duration-300 hover:shadow-sm ">
                         See Demo
                       </button>
@@ -160,7 +168,7 @@ export default function Portfolio() {
           </motion.svg>
           <Link
             href={"/contact"}
-            className="w-16 h-16 md:h-28 md:w-28 bg-black text-white  rounded-full flex items-center justify-center text-center m-auto absolute top-0 left-0 right-0 bottom-0 "
+            className="w-20 h-20 md:h-28 md:w-28 xl:h-32 xl:w-32 bg-black text-white  rounded-full flex items-center justify-center text-center m-auto absolute top-0 left-0 right-0 bottom-0 cursor-pointer z-30 text-sm md:text-lg"
           >
             Hire Me
           </Link>
