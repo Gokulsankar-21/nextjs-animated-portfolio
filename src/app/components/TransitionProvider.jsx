@@ -17,16 +17,19 @@ export default function TransitionProvider({ children }) {
           className="bg-black w-screen h-screen fixed z-30 rounded-b-[100px]"
           initial={{ height: "140vh" }}
           animate={{ height: "0vh" }}
-          exit={{ height: "140vh", backgroundColor: "rgb(0,0,0)",zIndex:'100' }}
+          exit={{
+            height: "140vh",
+            backgroundColor: "rgb(0,0,0)",
+            zIndex: "100",
+          }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         />
         {/* PATH NAME */}
         <motion.div
           className=" m-auto text-white text-8xl fixed top-0 left-0 bottom-0 right-0 w-fit h-fit "
-          initial={{ opacity: 1, zIndex: 30 }}
-          animate={{ opacity: 0, zIndex: 40 }}
-          exit={{}}
-          transition={{ delay: 0, duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 1, zIndex: "30", transform: "scale(1)" }}
+          animate={{ opacity: 1, zIndex: "40", transform: "scale(0)" }}
+          transition={{ delay: 0, duration: 1, ease: "easeIn" }}
         >
           {pathName === "/"
             ? "Home"

@@ -168,7 +168,8 @@ export default function Portfolio() {
           </motion.svg>
           <Link
             href={"/contact"}
-            className="w-20 h-20 md:h-28 md:w-28 xl:h-32 xl:w-32 bg-black text-white  rounded-full flex items-center justify-center text-center m-auto absolute top-0 left-0 right-0 bottom-0 cursor-pointer z-30 text-sm md:text-lg"
+            className="w-20 h-20 md:h-28 md:w-28 xl:h-32 xl:w-32 bg-red-500 text-white  rounded-full flex items-center justify-center text-center m-auto absolute top-0 left-0 right-0 bottom-0 cursor-pointer text-sm md:text-lg"
+            style={{ zIndex: "1000" }}
           >
             Hire Me
           </Link>
