@@ -10,8 +10,9 @@ const projects = [
     color: "from-red-200 to-blue-200",
     title: "Mern Blog App",
     desc: "Developed a Single Page Personal Blog App using the MERN stack, Implemented user authentication and authorization with Admin Dashboard",
-    img: "/Project_Images/Blog.png",
+    img: "/Project_Images/blog.gokuldev.in.png",
     link: "https://blog.gokuldev.in",
+    src_link: "https://github.com/Gokulsankar-21/MERN-Blog-App",
   },
   {
     id: 2,
@@ -20,14 +21,16 @@ const projects = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
     img: "/Project_Images/Blog.png",
     link: "https://book.gokuldev.in",
+    src_link: "https://github.com/Gokulsankar-21/mern-book-store-app",
   },
   {
     id: 3,
     color: "from-violet-200 to-purple-200",
     title: "IMDB Clone App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "/Project_Images/Blog.png",
+    img: "/Project_Images/movie.gokuldev.in.png",
     link: "https://movie.gokuldev.in",
+    src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
   },
   {
     id: 4,
@@ -36,6 +39,7 @@ const projects = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
     img: "/Project_Images/Blog.png",
     link: "https://social.gokuldev.in",
+    src_link: "https://github.com/Gokulsankar-21/MERN-social-media-app",
   },
   {
     id: 5,
@@ -44,6 +48,7 @@ const projects = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
     img: "/Project_Images/Blog.png",
     link: "https://amazon.gokuldev.in",
+    src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
   },
 ];
 
@@ -117,7 +122,14 @@ export default function Portfolio() {
 
                   {/* PROJECT IMAGE */}
                   <div className="relative w-80 h-48 md:w-[390px] md:h-60 lg:w-[460px] lg:h-[270px] xl:w-[510px] xl:h-[300px] 2xl:w-[570px] 2xl:h-[350px] ">
-                    <Image src={project.img} alt={project.title} fill />
+                    <Link href={project.link} target="_blank">
+                      <Image
+                        src={project.img}
+                        alt={project.title}
+                        fill
+                        className="rounded-md hover:shadow-2xl hover:cursor-pointer hover:scale-105 transition duration-300 ease-out"
+                      />
+                    </Link>
                     {/* Next js la imaeg intha maari optimize pannalam */}
                   </div>
 
@@ -125,9 +137,26 @@ export default function Portfolio() {
                   <p className="lg:text-xl w-80 md:w-96 lg:w-[400px] xl:w-[500px] 2xl:w-[600px] text-slate-700 font-normal">
                     {project.desc}
                   </p>
-                  <div className=" flex justify-end lg:translate-x-1/3">
+                  <div className=" flex gap-6 md:gap-8 items-center justify-end lg:translate-x-1/3">
+                    {/* GITHUB SOURCE LINK  */}
+                    <Link href={project.src_link} target="_blank">
+                      <button
+                        className="p-2 lg:p-3 flex items-center justify-center
+                       hover:shadow-lg hover:cursor-pointer hover:scale-110 transition duration-300 ease-out hover:bg-white rounded-full"
+                      >
+                        <Image
+                          src={"/github.png"}
+                          width={25}
+                          height={25}
+                          alt="github"
+                          className=" md:w-8 md:h-8  lg:w-10 lg:h-10 object-cover "
+                        />
+                      </button>
+                    </Link>
+
+                    {/* sEE DEMO LINK */}
                     <Link href={project.link} target="_blank">
-                      <button className="p-2 text-sm  font-semibold text-slate-600 md:p-4 md:text-lg lg:p-6 xl:p-8 rounded bg-white hover:scale-110 transition duration-300 hover:shadow-sm ">
+                      <button className="p-2 text-sm  font-semibold text-slate-600 md:p-4 md:text-lg lg:p-5 xl:p-7 rounded bg-white hover:scale-110 transition duration-300 hover:shadow-lg ease-out ">
                         See Demo
                       </button>
                     </Link>
@@ -168,7 +197,7 @@ export default function Portfolio() {
           </motion.svg>
           <Link
             href={"/contact"}
-            className="w-20 h-20 md:h-28 md:w-28 xl:h-32 xl:w-32 bg-red-500 text-white  rounded-full flex items-center justify-center text-center m-auto absolute top-0 left-0 right-0 bottom-0 cursor-pointer text-sm md:text-lg"
+            className="w-20 h-20 md:h-28 md:w-28 xl:h-32 xl:w-32 bg-balck text-white  rounded-full flex items-center justify-center text-center m-auto absolute top-0 left-0 right-0 bottom-0 cursor-pointer text-sm md:text-lg"
             style={{ zIndex: "1000" }}
           >
             Hire Me
