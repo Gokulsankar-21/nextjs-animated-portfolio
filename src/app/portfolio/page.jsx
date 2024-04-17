@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-
+import StackIcon from "tech-stack-icons";
 const projects = [
   {
     id: 1,
@@ -13,24 +13,46 @@ const projects = [
     img: "/Project_Images/blog.gokuldev.in.png",
     link: "https://blog.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/MERN-Blog-App",
+    tech_stack: [
+      "reactjs",
+      "nodejs",
+      "mongodb",
+      "redux",
+      "firebase",
+      "tailwindcss",
+      "vitejs",
+    ],
+    status: "completed",
   },
   {
     id: 2,
-    color: "from-blue-200 to-violet-200",
-    title: "Book Store App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "/Project_Images/Blog.png",
-    link: "https://book.gokuldev.in",
-    src_link: "https://github.com/Gokulsankar-21/mern-book-store-app",
-  },
-  {
-    id: 3,
     color: "from-violet-200 to-purple-200",
     title: "IMDB Clone App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
     img: "/Project_Images/movie.gokuldev.in.png",
     link: "https://movie.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
+    tech_stack: [
+      "nextjs",
+      "nodejs",
+      "tailwindcss",
+      "js",
+      "vitejs",
+      "html5",
+      "git",
+    ],
+    status: "completed",
+  },
+  {
+    id: 3,
+    color: "from-purple-200 to-red-200",
+    title: "Amazon UI Clone",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
+    img: "/Project_Images/Blog.png",
+    link: "https://amazon.gokuldev.in",
+    src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
+    tech_stack: ["html5", "css3", "aws", "js", "vscode", "git"],
+    status: "completed",
   },
   {
     id: 4,
@@ -40,15 +62,35 @@ const projects = [
     img: "/Project_Images/Blog.png",
     link: "https://social.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/MERN-social-media-app",
+    tech_stack: [
+      "reactjs",
+      "nodejs",
+      "mongodb",
+      "materialui",
+      "webpack",
+      "js",
+      "redux",
+    ],
+    status: "working on",
   },
   {
     id: 5,
-    color: "from-purple-200 to-red-200",
-    title: "Amazon UI Clone",
+    color: "from-blue-200 to-violet-200",
+    title: "Book Store App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
     img: "/Project_Images/Blog.png",
-    link: "https://amazon.gokuldev.in",
-    src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
+    link: "https://book.gokuldev.in",
+    src_link: "https://github.com/Gokulsankar-21/mern-book-store-app",
+    tech_stack: [
+      "reactjs",
+      "nodejs",
+      "mongodb",
+      "tailwindcss",
+      "vitejs",
+      "vscode",
+      "git",
+    ],
+    status: "working on",
   },
 ];
 
@@ -111,10 +153,10 @@ export default function Portfolio() {
               // PROJECT CONTAINER -project container ovvonum 100vh 100vw - itha than nama flex items ah vekrom
               <div
                 key={project.id}
-                className={`w-screen h-screen flex items-center justify-center bg-gradient-to-r rounderd ${project.color}`}
+                className={`w-screen h-screen flex gap-4 items-center justify-center bg-gradient-to-r rounderd ${project.color}`}
               >
                 {/* PROJECT INFO */}
-                <div className="flex flex-col gap-8 text-white">
+                <div className="flex flex-col gap-8 text-white  relative">
                   {/* PROJECT TITLE */}
                   <h1 className="text-3xl font-bold  md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-gray-700 ">
                     {project.title}
@@ -154,12 +196,34 @@ export default function Portfolio() {
                       </button>
                     </Link>
 
-                    {/* sEE DEMO LINK */}
+                    {/* SEE DEMO LINK */}
                     <Link href={project.link} target="_blank">
                       <button className="p-2 text-sm  font-semibold text-slate-600 md:p-4 md:text-lg lg:p-5 xl:p-7 rounded bg-white hover:scale-110 transition duration-300 hover:shadow-lg ease-out ">
                         See Demo
                       </button>
                     </Link>
+                  </div>
+                  {/* TECH STACK  */}
+                  <div className="w-28 h-full right-0 translate-x-36 top-0  absolute p-4 flex flex-col gap-5">
+                    {project.tech_stack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="p-2 bg-white rounded-xl w-10 h-10 flex items-center justify-center shadow-lg"
+                      >
+                        <StackIcon name={tech} className="w-8 h-8" />
+                      </span>
+                    ))}
+                  </div>
+                  {/* PROJECT STATUS  */}
+                  <div className="absolute left-2 bottom-2 flex items-center justify-center">
+                    {project.status === "working on" && (
+                      <>
+                        <span className="w-3 h-3 inline-block mr-2 p-1 bg-green-400 rounded-full"></span>
+                        <span className="text-green-800 text-sm ">
+                          working on
+                        </span>
+                      </>
+                    )}
                   </div>
                 </div>
               </div>
@@ -228,3 +292,8 @@ export default function Portfolio() {
   ithu maari pandratha avru innoru way la panni irukaru
 
 */
+/**
+ * @Production_Level_Improvement
+ *  Add the project stacks
+ *
+ */
