@@ -49,7 +49,7 @@ const projects = [
     title: "Amazon UI Clone",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
     img: "/Project_Images/Blog.png",
-    link: "https://amazon.gokuldev.in",
+    link: "http://amazon.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
     tech_stack: ["html5", "css3", "aws", "js", "vscode", "git"],
     status: "completed",
