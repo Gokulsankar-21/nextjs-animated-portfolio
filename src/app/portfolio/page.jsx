@@ -59,7 +59,7 @@ const projects = [
     color: "from-purple-200 to-red-200",
     title: "Socio Pedia App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "/Project_Images/book.gokuldev.in.png",
+    img: "/Project_Images/coming-soon.jpg",
     link: "https://social.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/MERN-social-media-app",
     tech_stack: [
@@ -78,7 +78,7 @@ const projects = [
     color: "from-blue-200 to-violet-200",
     title: "Book Store App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "/Project_Images/coming-soon.jpg",
+    img: "/Project_Images/amazon.gokuldev.in.png",
     link: "https://book.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/mern-book-store-app",
     tech_stack: [
