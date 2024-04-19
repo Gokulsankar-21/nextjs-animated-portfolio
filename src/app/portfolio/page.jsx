@@ -48,7 +48,7 @@ const projects = [
     color: "from-purple-200 to-red-200",
     title: "Amazon UI Clone",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "/Project_Images/Blog.png",
+    img: "/Project_Images/amazon.gokuldev.in.png",
     link: "http://amazon.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
     tech_stack: ["html5", "css3", "aws", "js", "vscode", "git"],
@@ -59,7 +59,7 @@ const projects = [
     color: "from-purple-200 to-red-200",
     title: "Socio Pedia App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
-    img: "/Project_Images/coming-soon.jpg",
+    img: "/Project_Images/book.gokuldev.in.png",
     link: "https://social.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/MERN-social-media-app",
     tech_stack: [
