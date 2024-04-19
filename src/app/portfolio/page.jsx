@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     color: "from-red-200 to-blue-200",
     title: "Mern Blog App",
-    desc: "Developed a Single Page Personal Blog App using the MERN Stack, Implemented User Auth with Admin Dashboard using JWT & Firebase",
+    desc: "Developed a Single Page Personal Blog App using MERN Stack, Implemented User Auth with Admin Dashboard using JWT & Firebase",
     img: "/Project_Images/blog.gokuldev.in.png",
     link: "https://blog.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/MERN-Blog-App",
