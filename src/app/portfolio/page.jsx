@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     color: "from-red-200 to-blue-200",
     title: "Mern Blog App",
-    desc: "Developed a Single Page Personal Blog App using the MERN stack, Implemented user authentication and authorization with Admin Dashboard",
+    desc: "Developed a Single Page Personal Blog App using the MERN Stack, Implemented User Auth with Admin Dashboard using JWT & Firebase",
     img: "/Project_Images/blog.gokuldev.in.png",
     link: "https://blog.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/MERN-Blog-App",
@@ -28,7 +28,7 @@ const projects = [
     id: 2,
     color: "from-violet-200 to-purple-200",
     title: "IMDB Clone App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
+    desc: "Developed an IMDB Inspired Web Application using Next Js, Tailwind CSS and TMDB Rest API for Real Time Movie Data.",
     img: "/Project_Images/movie.gokuldev.in.png",
     link: "https://movie.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
@@ -47,7 +47,7 @@ const projects = [
     id: 3,
     color: "from-purple-200 to-red-200",
     title: "Amazon UI Clone",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
+    desc: "Constructed a Responsive Amazon Clone Website using HTML, CSS, JavaScript and Deployed in AWS Platform as a Static Website using S3 Service",
     img: "/Project_Images/amazon.gokuldev.in.png",
     link: "http://amazon.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
@@ -58,7 +58,7 @@ const projects = [
     id: 4,
     color: "from-purple-200 to-red-200",
     title: "Socio Pedia App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
+    desc: "Building a Robust Social Pedia Web App using Latest Technologies that gives Seamless User Experience to Manage Social Networking",
     img: "/Project_Images/coming-soon.jpg",
     link: "https://social.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/MERN-social-media-app",
@@ -77,7 +77,7 @@ const projects = [
     id: 5,
     color: "from-blue-200 to-violet-200",
     title: "Book Store App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quisquam quis, iste dignissimos doloribus voluptatem aspernatur ",
+    desc: "Constructing a Book Store Web App using the MERN Stack, Enhanced Feature to Reader, Seller Accounts, Implemented Auth using Restful API",
     img: "/Project_Images/amazon.gokuldev.in.png",
     link: "https://book.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/mern-book-store-app",
@@ -176,31 +176,33 @@ export default function Portfolio() {
                   </div>
 
                   {/* PROJECT DESC */}
-                  <p className="lg:text-xl w-80 md:w-96 lg:w-[400px] xl:w-[500px] 2xl:w-[600px] text-slate-700 font-normal">
+                  <p className="lg:text-xl w-80 md:w-96 lg:w-[400px] xl:w-[500px] 2xl:w-[600px] text-slate-700 font-normal p-1">
                     {project.desc}
                   </p>
-                  <div className=" flex gap-6 md:gap-8 items-center justify-end lg:translate-x-1/3">
+                  <div className=" flex gap-6 md:gap-8 items-center justify-end ">
                     {/* GITHUB SOURCE LINK  */}
-                    <Link href={project.src_link} target="_blank">
-                      <button
-                        className="p-2 lg:p-3 flex items-center justify-center
+                    <Link
+                      href={project.src_link}
+                      target="_blank"
+                      className="p-2 lg:p-3 flex items-center justify-center
                        hover:shadow-lg hover:cursor-pointer hover:scale-110 transition duration-300 ease-out hover:bg-white rounded-full"
-                      >
-                        <Image
-                          src={"/github.png"}
-                          width={25}
-                          height={25}
-                          alt="github"
-                          className=" md:w-8 md:h-8  lg:w-10 lg:h-10 object-cover "
-                        />
-                      </button>
+                    >
+                      <Image
+                        src={"/github.png"}
+                        width={25}
+                        height={25}
+                        alt="github"
+                        className=" md:w-8 md:h-8  lg:w-10 lg:h-10 object-cover "
+                      />
                     </Link>
 
                     {/* SEE DEMO LINK */}
-                    <Link href={project.link} target="_blank">
-                      <button className="p-2 text-sm  font-semibold text-slate-600 md:p-4 md:text-lg lg:p-5 xl:p-7 rounded bg-white hover:scale-110 transition duration-300 hover:shadow-lg ease-out ">
-                        See Demo
-                      </button>
+                    <Link
+                      href={project.link}
+                      target="_blank"
+                      className="w-20 h-10 text-[13px] md:w-24 md:h-12 md:text-[15px]  lg:w-28 lg:h-14 lg:text-[18px] xl:w-32 xl:h-16 xl:text-[20px] flex items-center justify-center font-semibold text-slate-600 rounded bg-white hover:scale-110 transition duration-300 hover:shadow-lg ease-out z-40 relative"
+                    >
+                      See Demo
                     </Link>
                   </div>
                   {/* TECH STACK  */}

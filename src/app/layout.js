@@ -6,7 +6,7 @@ import TransitionProvider from "./components/TransitionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Gokuk Dev Portfolio App",
+  title: "Gokuk Dev Portfolio",
   description: "Best Animated Portfolio Ever",
   
 };
