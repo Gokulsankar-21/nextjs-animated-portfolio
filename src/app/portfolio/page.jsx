@@ -47,7 +47,7 @@ const projects = [
     id: 3,
     color: "from-purple-200 to-red-200",
     title: "Amazon UI Clone",
-    desc: "Constructed a Responsive Amazon Clone Website using HTML, CSS, JavaScript and Deployed in AWS Platform as a Static Website using S3 Service",
+    desc: "Constructed a Amazon Clone Website using HTML, CSS, JavaScript and Deployed in AWS Platform as a Static Website using S3 Service",
     img: "/Project_Images/amazon.gokuldev.in.png",
     link: "http://amazon.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/IMDB-NextJs-Clone-App",
@@ -77,7 +77,7 @@ const projects = [
     id: 5,
     color: "from-blue-200 to-violet-200",
     title: "Book Store App",
-    desc: "Constructing a Book Store Web App using the MERN Stack, Enhanced Feature to Reader, Seller Accounts, Implemented Auth using Restful API",
+    desc: "Serves as a Digital Bookstore where Users can Explore, Search, and Purchase Books, Admin Dashboard for Managing Books and Orders.",
     img: "/Project_Images/book.gokuldev.in.png",
     link: "https://book.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/mern-book-store-app",
@@ -263,7 +263,7 @@ export default function Portfolio() {
           </motion.svg>
           <Link
             href={"/contact"}
-            className="w-20 h-20 md:h-28 md:w-28 xl:h-32 xl:w-32 bg-balck text-white  rounded-full flex items-center justify-center text-center m-auto absolute top-0 left-0 right-0 bottom-0 cursor-pointer text-sm md:text-lg"
+            className="w-20 h-20 md:h-28 md:w-28 xl:h-32 xl:w-32 bg-black text-white  rounded-full flex items-center justify-center text-center m-auto absolute top-0 left-0 right-0 bottom-0 cursor-pointer text-sm md:text-lg"
             style={{ zIndex: "1000" }}
           >
             Hire Me
