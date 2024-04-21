@@ -78,7 +78,7 @@ const projects = [
     color: "from-blue-200 to-violet-200",
     title: "Book Store App",
     desc: "Constructing a Book Store Web App using the MERN Stack, Enhanced Feature to Reader, Seller Accounts, Implemented Auth using Restful API",
-    img: "/Project_Images/amazon.gokuldev.in.png",
+    img: "/Project_Images/book.gokuldev.in.png",
     link: "https://book.gokuldev.in",
     src_link: "https://github.com/Gokulsankar-21/mern-book-store-app",
     tech_stack: [
