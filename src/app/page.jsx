@@ -28,10 +28,10 @@ const Homepage = () => {
           </h1>
           {/* DESC */}
           <p className="lg:text-xl">
-            Welcome to my digital canvas, where innovation and creativity
-            converge. With a keen eye for aesthetics and a mastery of code, my
-            portfolio showcases a diverse collection of projects that reflect my
-            commitment to excellence.
+            Hello, I'm  <strong>Gokulsankar Thangaraj</strong>, a passionate junior full stack
+            developer and Cloud Computing Enthusiast. With a love for clean code
+            and creative problem-solving, I thrive on turning ideas into
+            functional web applications. Explore my projects and let’s connect!
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4 pt-1 sm:pt-0 ">

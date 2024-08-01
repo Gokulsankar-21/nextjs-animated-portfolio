@@ -70,20 +70,26 @@ export default function About() {
               />
             </div>
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+            <h1 className="font-bold text-2xl">About Me</h1>
 
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              As a frontend developer and UI designer, I&apos;m dedicated to
-              creating seamless digital experiences. I focus on user-centric
-              design principles to craft elegant interfaces that blend
-              aesthetics with functionality. My passion lies in shaping the
-              digital landscape with purpose and innovation.
+              I’m Gokulsankar Thangaraj, a junior full stack developer
+              passionate about creating seamless web experiences. With a
+              background in{" "}
+              <strong>
+                ReactJs, NodeJs, ExpressJS, MongoDB, NextJs, JavaScript and
+                Cloud Compputing
+              </strong>
+              . I thrive on turning ideas into functional code. Whether it’s
+              front-end magic or back-end logic, I’m all in. When I’m not
+              coding, you’ll find me sipping tea, exploring new libraries, and
+              tinkering with side projects.
             </p>
 
             {/* BIOGRAPHY QUOTES */}
             <span className="italic text-gray-700">
-              &quot;I am Always Working on Projects&quot;
+              &quot;Let's Build Something Together&quot;
             </span>
 
             {/* BIOGRAPHY SIGNATURE */}
