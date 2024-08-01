@@ -218,40 +218,7 @@ export default function About() {
               className=""
             >
               {/* EXPERIENCE LIST ITEM - 1 */}
-              <div className=" flex justify-between h-48">
-                {/* LEFT */}
-                <div className="w-1/3 flex flex-col gap-2">
-                  {/* JOB TITLE */}
-                  <div className="p-3 font-bold text-black bg-white rounded-s-lg rounded-b-lg">
-                    Self Developer
-                  </div>
-                  {/* JOB DESC */}
-                  <div className="p-3 text-sm italic">
-                    Working on Personal Projects and Building fully functional
-                    Web App using Advanced Technologies.
-                  </div>
-                  {/* JOB TIME */}
-                  <div className="p-3 text-sm font-bold text-red-400">
-                    Jan 2024 - Present
-                  </div>
-                  {/* JOB COMPANY */}
-                  <div className="ml-3 p-1 text-sm bg-white font-bold w-fit hidden"></div>
-                </div>
-                {/* CENTER */}
-                <div className="w-1/6">
-                  {/* LINE */}
-                  <div className="w-1 flex justify-center bg-gray-600 h-full relative">
-                    {/* LINE CIRCLE */}
-                    <div
-                      className="w-5 h-5 bg-white rounded-full
-                      ring-4 ring-red-400 absolute "
-                    ></div>
-                  </div>
-                </div>
-                {/* RIGHT */}
-                <div className="w-1/3 ">{/*EMPTY */}</div>
-              </div>
-
+            
               {/* EXPERIENCE LIST ITEM - 2 */}
               <div className="flex justify-between h-48">
                 {/* LEFT */}

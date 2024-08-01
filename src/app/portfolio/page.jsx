@@ -299,3 +299,4 @@ export default function Portfolio() {
  *  Add the project stacks
  *
  */
+// Add only solid and satisfying projects for tomorrow showcase to TL
