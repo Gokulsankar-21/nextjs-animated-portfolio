@@ -6,15 +6,16 @@ import Brain from "../components/Brain";
 
 export default function About() {
   const skills = [
-    { skill: "TypeScript" },
     { skill: "JavaScript" },
     { skill: "ReactJs" },
     { skill: "NodeJs" },
     { skill: "NextJs" },
     { skill: "ExpressJs" },
+    { skill: "Mongo DB" },
+    { skill: "TypeScript" },
+    { skill: "SQL" },
     { skill: "API" },
     { skill: "AJAX" },
-    { skill: "Mongo DB" },
     { skill: "Tailwind CSS" },
     { skill: "Web Socket" },
     { skill: "Cloud Computing" },
@@ -26,11 +27,10 @@ export default function About() {
     { skill: "Firebase" },
     { skill: "Webpack" },
     { skill: "VS Code" },
-    { skill: "Material UI" },
     { skill: "HTML" },
     { skill: "CSS" },
     { skill: "C" },
-    { skill: "C++" },
+    { skill: "Java" },
     { skill: "Python" },
   ];
 
