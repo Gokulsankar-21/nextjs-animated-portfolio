@@ -19,17 +19,10 @@ export default function About() {
     { skill: "Web Socket" },
     { skill: "Cloud Computing" },
     { skill: "ReduxJs" },
-    { skill: "Docker" },
     { skill: "Git" },
     { skill: "GitHub" },
     { skill: "npm" },
     { skill: "AWS" },
-    { skill: "EC2" },
-    { skill: "S3" },
-    { skill: "SSH" },
-    { skill: "JEST " },
-    { skill: "Vite" },
-    { skill: "Vitest " },
     { skill: "Firebase" },
     { skill: "Webpack" },
     { skill: "VS Code" },
@@ -38,10 +31,7 @@ export default function About() {
     { skill: "CSS" },
     { skill: "C" },
     { skill: "C++" },
-    { skill: "OOP" },
     { skill: "Python" },
-    { skill: "Pup" },
-    { skill: "Framer Motion" },
   ];
 
   const containerRef = useRef();
