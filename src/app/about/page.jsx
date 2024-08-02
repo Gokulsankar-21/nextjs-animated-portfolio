@@ -74,16 +74,16 @@ export default function About() {
 
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              I’m Gokulsankar Thangaraj, a Junior Full Stack Developer
+              I&apos;m Gokulsankar Thangaraj, a Junior Full Stack Developer
               Passionate about Creating Seamless Web experiences. With a
               background in{" "}
               <strong>
                 ReactJs, NodeJs, ExpressJS, MongoDB, NextJs, JavaScript and
                 Cloud Computing
               </strong>
-              . I thrive on turning ideas into functional code. Whether it’s
-              front-end magic or back-end logic, I’m all in. When I’m not
-              coding, you’ll find me sipping tea, exploring new libraries, and
+              . I thrive on turning ideas into functional code. Whether it&apos;s
+              front-end magic or back-end logic, I&apos;m all in. When I&apos;m not
+              coding, you&apos;ll find me sipping tea, exploring new libraries, and
               tinkering with side projects.
             </p>
 
