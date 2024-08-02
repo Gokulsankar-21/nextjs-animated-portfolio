@@ -28,10 +28,10 @@ const Homepage = () => {
           </h1>
           {/* DESC */}
           <p className="lg:text-xl">
-            Hello, I'm  <strong>Gokulsankar Thangaraj</strong>, a passionate junior full stack
+            Hello, I&apos;m  <strong>Gokulsankar Thangaraj</strong>, a Passionate Junior Full Stack
             developer and Cloud Computing Enthusiast. With a love for clean code
             and creative problem-solving, I thrive on turning ideas into
-            functional web applications. Explore my projects and let’s connect!
+            functional web applications. Explore my projects and let&apos;s connect!
           </p>
           {/* BUTTONS */}
           <div className="w-full flex gap-4 pt-1 sm:pt-0 ">
