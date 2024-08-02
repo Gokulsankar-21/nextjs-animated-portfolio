@@ -89,7 +89,7 @@ export default function About() {
 
             {/* BIOGRAPHY QUOTES */}
             <span className="italic text-gray-700">
-              &quot;Let's Build Something Together&quot;
+              &quot;Let&apos;s Build Something Together&quot;
             </span>
 
             {/* BIOGRAPHY SIGNATURE */}
